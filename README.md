@@ -5,6 +5,9 @@ Meta repository for an awesome project management idea aka Pashmak
 
 ## Introduction
 
+Status: draft
+
+
 The aim is to make some monitors for managers and of course, some constraint
 and criteria to update the project status for assignee.
 
@@ -25,7 +28,7 @@ Staff may chat each other using provided platform.
 - Chat(text, media) platform
 
 
-## Entities
+### Entities
 
 - *Project*: A perspective.
 - *Release*: A checkpoint which indicates the project is ready to shipped to
