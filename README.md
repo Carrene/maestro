@@ -41,9 +41,9 @@ Staff may chat each other using provided platform.
 - *Sprint*: A simple view that constructed using one or more items.
 - *Audit-log*: As the name says.
 
-## Actors
+### Actors
 
-- *Admin*: `Admin`istator.
+- *Admin*: Administrator.
 - *Resource*: An employee.
 - *Stakeholder*: A person(including administators) which interested in one or more items. So, she 
 	should stay updated about the status of subscribed items. Although, she may write
