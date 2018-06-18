@@ -40,18 +40,70 @@ Staff may chat each other using provided platform.
 
 ## Actors
 
-- *Admin*: kidding me?
-- *Stakeholder*: A person which interested in one or more items. So, she 
-	should stay update about the status of subscribed items. Although, she may write
+- *Admin*: `Admin`istator.
+- *Resource*: An employee.
+- *Stakeholder*: A person(including administators) which interested in one or more items. So, she 
+	should stay updated about the status of subscribed items. Although, she may write
 	comment for an item.
 
 
 ### User stories
 
 #### Project
+
+As an `Admin` I can create project with a unique title and optional descrition. 
+
+As as `Admin` and or a `Stakeholder` I need to stay updated about one or more
+projects.
+
 #### Release
+
+As an `Admin` I can create a release point for a project consis of phases.
+
+A Release should be automatically marked with colors based on the status of 
+it's items.
+
+
 #### Phase
+
+As an `Admin` I can create a Phase for a project.
+
+As an `Admin` I can add/remove items to/from a phase.
+
+
 #### Item
+
+As an `Admin` I can view, serach, group and filter items with release, phase,
+name, time, contents and etc ...
+
+As an `Admin` I can assign one or more resources to an item.
+
+As an `Admin` I can remove one or more resources from an item.
+
+As an `Stakeholder` I can subscribe/unsubscribe an item.
+
+As an `Stakeholder` I can write a comment for an update.
+
+As an `Resource` I have to update the status of in-progress items which 
+assigned to me.
+
+
 #### Sprint
+
+As an `Admin` I can group some items into a sprint. So, the status of the newly created sprint will be
+appeared in my dashboard.
+
+As an `Stakeholder` I can add a sprint into my dashboard to stay aware of that.
+
+
 #### Audit Log
+
+Every movement in whole environment will be tracked and recorded as an `Audit
+Log` entry.
+
+As an `Admin` I can view, serach, group and filter audit-log entries with time,
+project, release, phase, sprint, and resource.
+
+
+name, contents and etc ...
 
