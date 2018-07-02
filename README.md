@@ -54,14 +54,15 @@ Staff may chat each other using provided platform.
 
 #### Project
 
-As an `Admin` I can create project with a unique title and optional descrition. 
+###### mohammad
+As an `Admin` I can create project with a unique title and optional description. 
 
 As as `Admin` and or a `Stakeholder` I need to stay updated about one or more
 projects.
 
 #### Release
 
-As an `Admin` I can create a release point for a project consis of phases.
+As an `Admin` I can create a release point for one or more projects consis of phases.
 
 A Release should be automatically marked with colors based on the status of 
 it's items.
