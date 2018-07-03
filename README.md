@@ -4,7 +4,7 @@ Meta repository for an awesome project management idea aka Pashmak
 
 ## Goals
 
-- **Transparency** : in communications and relations between different corporation sections and stakholders of a product
+- **Transparency** : in communications and relations between different corporation sections and stakeholders of a product
 - **Facility** : in interaction and communication between teams, resources, stakeholders, ...
 
 ## Introduction
@@ -53,11 +53,14 @@ Staff may chat each other using provided platform.
 - *Stakeholder*: A person(including administrators) which interested in one or more items. So, she
 	should stay updated about the status of subscribed items. Although, she may write
 	comment for an item.
+*Imoportant Note*: Administrator is subset of Stakeholder
 
 
 ### User stories
 
 #### Project
+
+As an `Stakeholder` I can subscribe/unsubscribe an item.
 
 As an `Admin` I can create project with a unique title and optional description.
 
@@ -65,6 +68,8 @@ As an `Admin` and or a `Stakeholder` I need to stay updated about one or more
 projects.
 
 #### Release
+
+As an `Stakeholder` I can subscribe/unsubscribe an item.
 
 As an `Admin` I can create a release point for a project consist of phases.
 
