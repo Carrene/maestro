@@ -2,6 +2,10 @@
 
 Meta repository for an awesome project management idea aka Pashmak
 
+## Goals
+
+- Transparency : in communications and relations between different corporation sections and stakholders of a product
+- Facility : in interaction and communication between teams, resources, stakeholders, ...
 
 ## Introduction
 
