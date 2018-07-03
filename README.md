@@ -34,13 +34,13 @@ Staff may chat each other using provided platform.
 
 ### Entities
 
-- *Project*: A perspective.
-- *Release*: A checkpoint which indicates the project is ready to shipped to
-	the end-user.
+- *Release*: A checkpoint which indicates the product is ready to shipped to
+	the end-user. It may needs that some projects in different sections of a corporation be done to release the product.
+- *Project*: A collection of tasks which should be done as a part of the release provision.
 - *Phase*: Another name for `milestone` to encapsulate one or more items 
 	within within a time-span, phases should not overlapped.
 - *Container*: A simple storage to hold items, containers will be chained to 
-	make a workflow: backlog, triage, development, test, QA and etc ...
+	make a *Workflow*: backlog, triage, development, test, QA and etc ...
 - *Item*: A unit of work which belongs to a project.
 - *Sprint*: A simple view that constructed using one or more items.
 - *Audit-log*: As the name says.
