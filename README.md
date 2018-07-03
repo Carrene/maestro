@@ -45,7 +45,7 @@ Staff may chat each other using provided platform.
 
 - *Admin*: Administrator.
 - *Resource*: An employee.
-- *Stakeholder*: A person(including administators) which interested in one or more items. So, she 
+- *Stakeholder*: A person(including administrators) which interested in one or more items. So, she
 	should stay updated about the status of subscribed items. Although, she may write
 	comment for an item.
 
@@ -54,17 +54,17 @@ Staff may chat each other using provided platform.
 
 #### Project
 
-As an `Admin` I can create project with a unique title and optional descrition. 
+As an `Admin` I can create project with a unique title and optional description.
 
-As as `Admin` and or a `Stakeholder` I need to stay updated about one or more
+As an `Admin` and or a `Stakeholder` I need to stay updated about one or more
 projects.
 
 #### Release
 
-As an `Admin` I can create a release point for a project consis of phases.
+As an `Admin` I can create a release point for a project consist of phases.
 
 A Release should be automatically marked with colors based on the status of 
-it's items.
+its items.
 
 
 #### Phase
@@ -76,7 +76,7 @@ As an `Admin` I can add/remove items to/from a phase.
 
 #### Item
 
-As an `Admin` I can view, serach, group and filter items with release, phase,
+As an `Admin` I can view, search, group and filter items with release, phase,
 name, time, contents and etc ...
 
 As an `Admin` I can assign one or more resources to an item.
@@ -104,7 +104,7 @@ As an `Stakeholder` I can add a sprint into my dashboard to stay aware of that.
 Every movement in whole environment will be tracked and recorded as an `Audit
 Log` entry.
 
-As an `Admin` I can view, serach, group and filter audit-log entries with time,
+As an `Admin` I can view, search, group and filter audit-log entries with time,
 project, release, phase, sprint, and resource.
 
 
