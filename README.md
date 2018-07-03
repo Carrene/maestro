@@ -2,6 +2,10 @@
 
 Meta repository for an awesome project management idea aka Pashmak
 
+## Goals
+
+- **Transparency** : in communications and relations between different corporation sections and stakholders of a product
+- **Facility** : in interaction and communication between teams, resources, stakeholders, ...
 
 ## Introduction
 
@@ -25,19 +29,20 @@ Staff may chat each other using provided platform.
 - Back-end REST API
 - WWW front-end application
 - SSO using (CAS)[https://github.com/Carrene/carrene-authorization-service]
-- Chat(text, media) platform
+- Chat(text, media) platform [https://github.com/Carrene/social-network]
 
 
 ### Entities
 
-- *Project*: A perspective.
-- *Release*: A checkpoint which indicates the project is ready to shipped to
-	the end-user.
-- *Phase*: Another name for `milestone` to encapsulate one or more items 
-	within within a time-span, phases should not overlapped.
-- *Container*: A simple storage to hold items, containers will be chained to 
-	make a workflow: backlog, triage, development, test, QA and etc ...
-- *Item*: A unit of work which belongs to a project.
+- *Release*: A checkpoint which indicates the product is ready to shipped to
+	the end-user. It may needs that some projects in different sections of a corporation be done to release the product.
+	Stakeholders of a release have a private chat room to be in touch on-line and can subscribe to be inform on each raised event for one of related projects. 
+- *Project*: A collection of tasks which should be done as a part of the release provision. The stakeholders of a project can be in touch on-line at a private room of the project and subscribe to be get notifications on the items events.
+- *Item*: A unit of work which belongs to a project. Each item will be assigned to one or more resources and has a status at a glance of time. The stakeholders of an item are in touch on-line through the private room and can subscribe to get notifications on item status changes.
+- *Phase*: A stage of operation to do an item, phases will be chained to 
+	make a *Workflow*: backlog, triage, development, test, QA and etc. Items move between different phases, they can be in multiple phases simultaneously and initially each new item be put on the triage. Each phase has a response time, so the items should move between them in determined time stamps.
+- *Milestone*: to encapsulate one or more items 
+	within within a time-span, milestones should not overlapped.
 - *Sprint*: A simple view that constructed using one or more items.
 - *Audit-log*: As the name says.
 
