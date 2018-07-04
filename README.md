@@ -54,7 +54,7 @@ Staff may chat each other using provided platform.
 	should stay updated about the status of subscribed items. Although, she may write
 	comment for an item.
 
-**Imoportant Note**: Administrator is subset of Stakeholder
+**Important Note**: Administrator is subset of Stakeholder
 
 
 ### User stories
