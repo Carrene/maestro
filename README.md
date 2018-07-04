@@ -60,7 +60,7 @@ Staff may chat each other using provided platform.
 
 #### Project
 
-As an `Stakeholder` I can subscribe/unsubscribe an item.
+As an `Stakeholder` I can subscribe/unsubscribe an Project.
 
 As an `Admin` I can create project with a unique title and optional description.
 
@@ -69,7 +69,7 @@ projects.
 
 #### Release
 
-As an `Stakeholder` I can subscribe/unsubscribe an item.
+As an `Stakeholder` I can subscribe/unsubscribe an Release.
 
 As an `Admin` I can create a release point for a project consist of phases.
 
