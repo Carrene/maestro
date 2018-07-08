@@ -57,7 +57,7 @@ Staff may chat each other using provided platform.
 ### Projects
 
 - Back-end: [dolphin](https://github.com/Carrene/dolphin)
-- Web-front-end: (Not made a repository yet)
+- Web-front-end: -
 
 ### User stories
 
