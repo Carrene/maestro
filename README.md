@@ -54,6 +54,10 @@ Staff may chat each other using provided platform.
 	should stay updated about the status of subscribed items. Although, she may write
 	comment for an item.
 
+### Projects
+
+- Back-end: [dolphin](https://github.com/Carrene/dolphin)
+- Web-front-end: (Not made a repository yet)
 
 ### User stories
 
