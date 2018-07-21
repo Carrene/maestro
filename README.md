@@ -28,8 +28,8 @@ Staff may chat each other using provided platform.
 - Mobile app
 - Back-end REST API
 - WWW front-end application
-- SSO using (CAS)[https://github.com/Carrene/carrene-authorization-service]
-- Chat(text, media) platform [https://github.com/Carrene/social-network]
+- SSO using [CAS](https://github.com/Carrene/carrene-authorization-service)
+- [Chat(text, media) platform](https://github.com/Carrene/social-network)
 
 
 ### Entities
@@ -37,8 +37,8 @@ Staff may chat each other using provided platform.
 - *Release*: A checkpoint which indicates the product is ready to shipped to
 	the end-user. It may needs that some projects in different sections of a corporation be done to release the product.
 	Stakeholders of a release have a private chat room to be in touch on-line and can subscribe to be inform on each raised event for one of related projects. 
-- *Project*: A collection of tasks which should be done as a part of the release provision. The stakeholders of a project can be in touch on-line at a private room of the project and subscribe to be get notifications on the items events.
-- *Item*: A unit of work which belongs to a project. Each item will be assigned to one or more resources and has a status at a glance of time. The stakeholders of an item are in touch on-line through the private room and can subscribe to get notifications on item status changes.
+- *Project*: A collection of tasks which should be done as a part of the release provision. The stakeholders of a project can be in touch on-line at a private room of the project and subscribe to be get notifications on the tasks events.
+- *Task*: A unit of work which belongs to a project. Each item will be assigned to one or more resources and has a status at a glance of time. The stakeholders of an item are in touch on-line through the private room and can subscribe to get notifications on item status changes.
 - *Phase*: A stage of operation to do an item, phases will be chained to 
 	make a *Workflow*: backlog, triage, development, test, QA and etc. Items move between different phases, they can be in multiple phases simultaneously and initially each new item be put on the triage. Each phase has a response time, so the items should move between them in determined time stamps.
 - *Milestone*: to encapsulate one or more items 
@@ -50,32 +50,31 @@ Staff may chat each other using provided platform.
 
 - *Admin*: Administrator.
 - *Resource*: An employee.
-- *Stakeholder*: A person(including administrators) which interested in one or more items. So, she
+- *Stakeholder*: A person(including administrators) which interested in one or more items. So, she 
 	should stay updated about the status of subscribed items. Although, she may write
 	comment for an item.
 
-**Important Note**: Administrator is subset of Stakeholder
+### Projects
 
+- Back-end: [dolphin](https://github.com/Carrene/dolphin)
+- Web-front-end: -
 
 ### User stories
 
 #### Project
 
-As an `Stakeholder` I can subscribe/unsubscribe an Project.
+As an `Admin` I can create project with a unique title and optional descrition. 
 
-As an `Admin` I can create project with a unique title and optional description.
-
-As an `Admin` and or a `Stakeholder` I need to stay updated about one or more
+As as `Admin` and or a `Stakeholder` I need to stay updated about one or more
 projects.
+
 
 #### Release
 
-As an `Stakeholder` I can subscribe/unsubscribe an Release.
-
-As an `Admin` I can create a release point for a project consist of phases.
+As an `Admin` I can create a release point for a project consis of phases.
 
 A Release should be automatically marked with colors based on the status of 
-its items.
+it's items.
 
 
 #### Phase
@@ -87,7 +86,7 @@ As an `Admin` I can add/remove items to/from a phase.
 
 #### Item
 
-As an `Admin` I can view, search, group and filter items with release, phase,
+As an `Admin` I can view, serach, group and filter items with release, phase,
 name, time, contents and etc ...
 
 As an `Admin` I can assign one or more resources to an item.
@@ -115,7 +114,7 @@ As an `Stakeholder` I can add a sprint into my dashboard to stay aware of that.
 Every movement in whole environment will be tracked and recorded as an `Audit
 Log` entry.
 
-As an `Admin` I can view, search, group and filter audit-log entries with time,
+As an `Admin` I can view, serach, group and filter audit-log entries with time,
 project, release, phase, sprint, and resource.
 
 
