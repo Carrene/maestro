@@ -43,7 +43,7 @@ Staff may chat each other using provided platform.
 - *Milestone*: To encapsulate one or more tasks within a time-span, milestones should not overlapped.
 - *Stage*: A chain of various points of `project`. Each component of `stage` will be set based on the order which `administrator` specifies. The progress of project procedure can be iterated on different components of stage.
 - *Tag*: A label for defining an attribute of specific `task` as a short statement.
-- *Item*: An `item` is shortest part of a `project` 
+- *Item*: An `item` is shortest part of a `project`which is assigned to a `resource`. Each `task` includes one or more `items`, also each `stage` can icludes one or more `items`. 
 - *Sprint*: A simple view that constructed using one or more items.
 - *Audit-log*: As the name says.
 
@@ -70,8 +70,9 @@ As an `Admin` I can create project with a unique title and optional descrition.
 As as `Admin` and or a `Stakeholder` I need to stay updated about one or more
 projects.
 
-As an `Admin` I can change estimated due date which is defined in a project.
+As an `Admin` I can change due date which is defined in a project.
 
+As an `Admin` I have to be notified any time project status changes.
 
 #### Release
 
@@ -80,15 +81,21 @@ As an `Admin` I can create a release point for a project consis of phases.
 A Release should be automatically marked with colors based on the status of 
 it's items.
 
+As an `Admin` I can change due date which is defined in a project.
 
-#### Phase
+As an `Admin` I have to be notified any time release status changes.
 
-As an `Admin` I can create a Phase for a project.
+#### Stage
+
+As an `Admin` I can create a Stage for a project.
 
 As an `Admin` I can add/remove items to/from a phase.
 
+#### Task
 
-#### Item
+
+
+#### Task
 
 As an `Admin` I can view, search, group and filter items with release, phase,
 name, time, contents and etc ...
