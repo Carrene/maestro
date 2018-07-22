@@ -52,10 +52,10 @@ Staff may chat each other using provided platform.
 ### Actors
 
 - *Admin*: Administrator.
-- *Guest*: A person who can be updated about events occur in a `release`.
+- *Guest*: A person who can be updated on events occur in a `release`.
 - *Resource*: An employee.
 - *Stakeholder*: A person(including administrators, guest, resources) which interested in one or more items. So, she/he 
-	should stay updated about the status of subscribed items. Although, she/he may write
+	should stay updated on the status of subscribed items. Although, she/he may write
 	comment for an item.
 
 ### Projects
