@@ -4,7 +4,7 @@ Meta repository for an awesome project management idea aka Pashmak
 
 ## Goals
 
-- **Transparency** : in communications and relations between different corporation sections and stakholders of a product
+- **Transparency** : in communications and relations between different corporation sections and stakeholders of a product
 - **Facility** : in interaction and communication between teams, resources, stakeholders, ...
 
 ## Introduction
@@ -28,30 +28,34 @@ Staff may chat each other using provided platform.
 - Mobile app
 - Back-end REST API
 - WWW front-end application
-- SSO using (CAS)[https://github.com/Carrene/carrene-authorization-service]
-- Chat(text, media) platform [https://github.com/Carrene/social-network]
+- SSO using [CAS](https://github.com/Carrene/carrene-authorization-service)
+- [Chat(text, media) platform](https://github.com/Carrene/social-network)
 
 
 ### Entities
 
 - *Release*: A checkpoint which indicates the product is ready to shipped to
-	the end-user. It may needs that some projects in different sections of a corporation be done to release the product.
-	Stakeholders of a release have a private chat room to be in touch on-line and can subscribe to be inform on each raised event for one of related projects. 
-- *Project*: A collection of tasks which should be done as a part of the release provision. The stakeholders of a project can be in touch on-line at a private room of the project and subscribe to be get notifications on the items events.
-- *Item*: A unit of work which belongs to a project. Each item will be assigned to one or more resources and has a status at a glance of time. The stakeholders of an item are in touch on-line through the private room and can subscribe to get notifications on item status changes.
-- *Phase*: A stage of operation to do an item, phases will be chained to 
-	make a *Workflow*: backlog, triage, development, test, QA and etc. Items move between different phases, they can be in multiple phases simultaneously and initially each new item be put on the triage. Each phase has a response time, so the items should move between them in determined time stamps.
-- *Milestone*: to encapsulate one or more items 
-	within within a time-span, milestones should not overlapped.
+	the end-user. It may needs that some `projects` in different sections of a corporation be done to release the product.
+	`Stakeholders` of a `release` have a private chat room to be in touch on-line and can subscribe to be inform on each raised event for one of related `projects`. 
+- *Project*: A collection of `tasks` which should be done as a part of the `release` provision. The `stakeholders` of a `project` can be in touch on-line at a private room of the `project` and subscribe to be get notifications on the `tasks` events.
+- *Task*: A unit of work which belongs to a project. Each task will consider one or more items and has a status at a glance of time. The stakeholders of an task are in touch on-line through the private room and can subscribe to get notifications on Task status changes.
+- *Phase*: A point of operation to do an `task`, `phases` will be chained to 
+	make a *Stage*: backlog, triage, development, test, QA and etc. Tasks move between different `phases`, they can be in multiple phases simultaneously and initially each new item be put on the triage. Each phase has a response time, so the tasks should move between them in determined time stamps.
+- *Milestone*: to encapsulate one or more tasks 
+	within a time-span, milestones should not overlapped.
+- *Stage*: A chain of various points of `project`. Each component of `stage` will be set based on the order which `administrator` specifies. The progress of project procedure can be iterated on different components of stage.
+- *Tag*: A label for defining an attribute of specific `task` as a short statement.
+- *Item*: An `item` is shortest part of a `project` 
 - *Sprint*: A simple view that constructed using one or more items.
 - *Audit-log*: As the name says.
 
 ### Actors
 
 - *Admin*: Administrator.
+- *Guest*: A person who can be updated on events occur in a `release`.
 - *Resource*: An employee.
-- *Stakeholder*: A person(including administators) which interested in one or more items. So, she 
-	should stay updated about the status of subscribed items. Although, she may write
+- *Stakeholder*: A person(including administrators, guest, resources) which interested in one or more items. So, she/he 
+	should stay updated on the status of subscribed items. Although, she/he may write
 	comment for an item.
 
 ### Projects
@@ -67,6 +71,9 @@ As an `Admin` I can create project with a unique title and optional descrition.
 
 As as `Admin` and or a `Stakeholder` I need to stay updated about one or more
 projects.
+
+As an `Admin` I can change estimated due date which is defined in a project.
+
 
 #### Release
 
