@@ -4,8 +4,8 @@ Meta repository for an awesome project management idea aka Pashmak
 
 ## Goals
 
-- **Transparency** : in communications and relations between different corporation sections and stakeholders of a product
-- **Facility** : in interaction and communication between teams, resources, stakeholders, ...
+- **Transparency** : In communications and relations between different corporation sections and stakeholders of a product
+- **Facility** : In interaction and communication between teams, resources, stakeholders, ...
 
 ## Introduction
 
@@ -36,13 +36,11 @@ Staff may chat each other using provided platform.
 
 - *Release*: A checkpoint which indicates the product is ready to shipped to
 	the end-user. It may needs that some `projects` in different sections of a corporation be done to release the product.
-	`Stakeholders` of a `release` have a private chat room to be in touch on-line and can subscribe to be inform on each raised event for one of related `projects`. 
+`Stakeholders` of a `release` have a private chat room to be in touch on-line and can subscribe to be inform on each raised event for one of related `projects`. 
 - *Project*: A collection of `tasks` which should be done as a part of the `release` provision. The `stakeholders` of a `project` can be in touch on-line at a private room of the `project` and subscribe to be get notifications on the `tasks` events.
 - *Task*: A unit of work which belongs to a project. Each task will consider one or more items and has a status at a glance of time. The stakeholders of an task are in touch on-line through the private room and can subscribe to get notifications on Task status changes.
-- *Phase*: A point of operation to do an `task`, `phases` will be chained to 
-	make a *Stage*: backlog, triage, development, test, QA and etc. Tasks move between different `phases`, they can be in multiple phases simultaneously and initially each new item be put on the triage. Each phase has a response time, so the tasks should move between them in determined time stamps.
-- *Milestone*: to encapsulate one or more tasks 
-	within a time-span, milestones should not overlapped.
+- *Phase*: A point of operation to do an `task`, `phases` will be chained to make a *Stage*: backlog, triage, development, test, QA and etc. Tasks move between different `phases`, they can be in multiple phases simultaneously and initially each new item be put on the triage. Each phase has a response time, so the tasks should move between them in determined time stamps.
+- *Milestone*: To encapsulate one or more tasks within a time-span, milestones should not overlapped.
 - *Stage*: A chain of various points of `project`. Each component of `stage` will be set based on the order which `administrator` specifies. The progress of project procedure can be iterated on different components of stage.
 - *Tag*: A label for defining an attribute of specific `task` as a short statement.
 - *Item*: An `item` is shortest part of a `project` 
@@ -54,7 +52,7 @@ Staff may chat each other using provided platform.
 - *Admin*: Administrator.
 - *Guest*: A person who can be updated on events occur in a `release`.
 - *Resource*: An employee.
-- *Stakeholder*: A person(including administrators, guest, resources) which interested in one or more items. So, she/he 
+- *Stakeholder*: A person(including administrators, guests, resources) which interested in one or more items. So, she/he 
 	should stay updated on the status of subscribed items. Although, she/he may write
 	comment for an item.
 
@@ -92,18 +90,18 @@ As an `Admin` I can add/remove items to/from a phase.
 
 #### Item
 
-As an `Admin` I can view, serach, group and filter items with release, phase,
+As an `Admin` I can view, search, group and filter items with release, phase,
 name, time, contents and etc ...
 
 As an `Admin` I can assign one or more resources to an item.
 
 As an `Admin` I can remove one or more resources from an item.
 
-As an `Stakeholder` I can subscribe/unsubscribe an item.
+As a `Stakeholder` I can subscribe/unsubscribe an item.
 
-As an `Stakeholder` I can write a comment for an update.
+As a `Stakeholder` I can write a comment for an update.
 
-As an `Resource` I have to update the status of in-progress items which 
+As a `Resource` I have to update the status of in-progress items which 
 assigned to me.
 
 
@@ -112,7 +110,7 @@ assigned to me.
 As an `Admin` I can group some items into a sprint. So, the status of the newly created sprint will be
 appeared in my dashboard.
 
-As an `Stakeholder` I can add a sprint into my dashboard to stay aware of that.
+As a `Stakeholder` I can add a sprint into my dashboard to stay aware of that.
 
 
 #### Audit Log
