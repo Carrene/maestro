@@ -87,9 +87,9 @@ As an `Admin` I have to be notified any time release status changes.
 
 #### Stage
 
-As an `Admin` I can create a Stage for a project.
+As an `Admin` I can create a stage for a project.
 
-As an `Admin` I can add/remove items to/from a phase.
+As an `Admin` I can add/remove items to/from a stage.
 
 As an `Admin` I can define one or more items for a task.
 
