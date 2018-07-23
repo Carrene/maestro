@@ -87,12 +87,20 @@ As an `Admin` I have to be notified any time release status changes.
 
 #### Stage
 
-As an `Admin` I can create a Stage for a project.
+As an `Admin` I can create a stage for a project.
 
-As an `Admin` I can add/remove items to/from a phase.
+As an `Admin` I can add/remove items to/from a stage.
 
-#### Task
+As an `Admin` I can define one or more items for a task.
 
+As an `Admin` I can change the order of stage elements.
+
+
+#### Item
+
+As an `Admin` I can assign one or more items to a resource.
+
+As an `Admin` I can change due date of item.
 
 
 #### Task
@@ -100,16 +108,22 @@ As an `Admin` I can add/remove items to/from a phase.
 As an `Admin` I can view, search, group and filter items with release, phase,
 name, time, contents and etc ...
 
-As an `Admin` I can assign one or more resources to an item.
+As an `Admin` I can append/remove one or more assignees to/from a task.
 
-As an `Admin` I can remove one or more resources from an item.
-
-As a `Stakeholder` I can subscribe/unsubscribe an item.
+As a `Stakeholder` I can subscribe/unsubscribe an task.
 
 As a `Stakeholder` I can write a comment for an update.
 
 As a `Resource` I have to update the status of in-progress items which 
 assigned to me.
+
+As an `Admin` I can define one or more items for a task.
+
+#### Tag
+
+As an `Admin` I can create a tag.
+
+As an `Admin` I can attach one or more tags to one or tasks.
 
 
 #### Sprint
