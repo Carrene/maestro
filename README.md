@@ -76,12 +76,12 @@ As an `Admin` I have to be notified any time project status changes.
 
 #### Release
 
-As an `Admin` I can create a release point for a project consis of phases.
+As an `Admin` I can create a release point for a product.
 
 A Release should be automatically marked with colors based on the status of 
 it's items.
 
-As an `Admin` I can change due date which is defined in a project.
+As an `Admin` I can change due date which is defined in a release.
 
 As an `Admin` I have to be notified any time release status changes.
 
