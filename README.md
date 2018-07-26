@@ -1,6 +1,6 @@
-# Pashmak
+# Maestro
 
-Meta repository for an awesome project management idea aka Pashmak
+Meta repository for an awesome project management idea aka Maestro
 
 ## Goals
 
