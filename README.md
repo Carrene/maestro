@@ -37,13 +37,13 @@ Staff may chat each other using provided platform.
 - *Release*: A checkpoint which indicates the product is ready to shipped to
 	the end-user. It may needs that some `projects` in different sections of a corporation be done to release the product.
 `Stakeholders` of a `release` have a private chat room to be in touch on-line and can subscribe to be inform on each raised event for one of related `projects`. 
-- *Project*: A collection of `tasks` which should be done as a part of the `release` provision. The `stakeholders` of a `project` can be in touch on-line at a private room of the `project` and subscribe to be get notifications on the `tasks` events.
-- *Task*: An unit of work which belongs to a project. Each task will consider one or more items and has a status at a glance of time. The stakeholders of an task are in touch on-line through the private room and can subscribe to get notifications on Task status changes.
-- *Phase*: A point of operation to do an `task`, `phases` will be chained to make a *Stage*: backlog, triage, development, test, QA and etc. Tasks move between different `phases`, they can be in multiple phases simultaneously and initially each new item be put on the triage. Each phase has a response time, so the tasks should move between them in determined time stamps.
-- *Milestone*: To encapsulate one or more tasks within a time-span, milestones should not overlapped.
+- *Project*: A collection of `issues` which should be done as a part of the `release` provision. The `stakeholders` of a `project` can be in touch on-line at a private room of the `project` and subscribe to be get notifications on the `issues` events.
+- *Issue*: An unit of work which belongs to a project. Each issue will consider one or more items and has a status at a glance of time. The stakeholders of an issue are in touch on-line through the private room and can subscribe to get notifications on Issue status changes.
+- *Phase*: A point of operation to do an `issue`, `phases` will be chained to make a *Stage*: backlog, triage, development, test, QA and etc. Issues move between different `phases`, they can be in multiple phases simultaneously and initially each new item be put on the triage. Each phase has a response time, so the issues should move between them in determined time stamps.
+- *Milestone*: To encapsulate one or more issues within a time-span, milestones should not overlapped.
 - *Stage*: A chain of various points of `project`. Each component of `stage` will be set based on the order which `administrator` specifies. The progress of project procedure can be iterated on different components of stage.
-- *Tag*: A label for defining an attribute of specific `task` as a short statement.
-- *Item*: An `item` is shortest part of a `project`which is assigned to a `resource`. Each `task` includes one or more `items`, also each `stage` can icludes one or more `items`. 
+- *Tag*: A label for defining an attribute of specific `issue` as a short statement.
+- *Item*: An `item` is shortest part of a `project`which is assigned to a `resource`. Each `issue` includes one or more `items`, also each `stage` can icludes one or more `items`. 
 - *Sprint*: A simple view that constructed using one or more items.
 - *Audit-log*: As the name says.
 
@@ -62,6 +62,8 @@ Staff may chat each other using provided platform.
 - Web-front-end: -
 
 ### User stories
+
+## Phase 1
 
 #### Project
 
@@ -91,7 +93,7 @@ As an `Admin` I can create a stage for a project.
 
 As an `Admin` I can add/remove items to/from a stage.
 
-As an `Admin` I can define one or more items for a task.
+As an `Admin` I can define one or more items for an issue.
 
 As an `Admin` I can change the order of stage elements.
 
@@ -103,27 +105,27 @@ As an `Admin` I can assign one or more items to a resource.
 As an `Admin` I can change due date of item.
 
 
-#### Task
+#### Issue
 
 As an `Admin` I can view, search, group and filter items with release, phase,
 name, time, contents and etc ...
 
-As an `Admin` I can append/remove one or more assignees to/from a task.
+As an `Admin` I can append/remove one or more assignees to/from an issue.
 
-As a `Stakeholder` I can subscribe/unsubscribe an task.
+As a `Stakeholder` I can subscribe/unsubscribe an issue.
 
 As a `Stakeholder` I can write a comment for an update.
 
 As a `Resource` I have to update the status of in-progress items which 
 assigned to me.
 
-As an `Admin` I can define one or more items for a task.
+As an `Admin` I can define one or more items for an issue.
 
 #### Tag
 
 As an `Admin` I can create a tag.
 
-As an `Admin` I can attach one or more tags to one or tasks.
+As an `Admin` I can attach one or more tags to one or issues.
 
 
 #### Sprint
@@ -144,4 +146,16 @@ project, release, phase, sprint, and resource.
 
 
 name, contents and etc ...
+
+## Phase 2
+
+##### This phase is in draft status
+
+As an `Admin`, I should be able to create a new User/Group/Workflow/Phase/Skill.
+
+As an `Admin`, I should be able to edit a User/Group/Skill.
+
+As an `Admin`, I will be not be able to edit an active Workflow/Phase.
+
+As an `Admin`, I should be able to give users certain skills.
 
