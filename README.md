@@ -63,6 +63,8 @@ Staff may chat each other using provided platform.
 
 ### User stories
 
+## Phase 1
+
 #### Project
 
 As an `Admin` I can create project with a unique title and optional descrition. 
@@ -144,4 +146,16 @@ project, release, phase, sprint, and resource.
 
 
 name, contents and etc ...
+
+## Phase 2
+
+##### This phase is in draft status
+
+As an `Admin`, I should be able to create a new User/Group/Workflow/Phase/Skill.
+
+As an `Admin`, I should be able to edit a User/Group/Skill.
+
+As an `Admin`, I will be not be able to edit an active Workflow/Phase.
+
+As an `Admin`, I should be able to give users certain skills.
 
