@@ -51,7 +51,8 @@ Staff may chat each other using provided platform.
 
 - *Admin*: Administrator.
 - *Guest*: A person who can be updated on events occur in a `release`.
-- *Resource*: An employee.
+- *Triage Resource*: User who is assigned to the Triage Phase of the project, aka the Project Manager/Assistant Proj. mgr.
+- *Resource*: User who has any skill that can be assigned to a phase.
 - *Stakeholder*: A person(including administrators, guests, resources) which interested in one or more items. So, she/he 
 	should stay updated on the status of subscribed items. Although, she/he may write
 	comment for an item.
@@ -67,7 +68,7 @@ Staff may chat each other using provided platform.
 
 #### Project
 
-As an `Admin` I can create project with a unique title and optional descrition. 
+As an `Admin` I can create project with a unique title and optional descrition.
 
 As as `Admin` and or a `Stakeholder` I need to stay updated about one or more
 projects.
@@ -75,6 +76,8 @@ projects.
 As an `Admin` I can change due date which is defined in a project.
 
 As an `Admin` I have to be notified any time project status changes.
+
+As an `Admin` or `Triage Resource` or `Stakeholder` I can chat about the project using the project chat.
 
 #### Release
 
@@ -86,6 +89,8 @@ it's items.
 As an `Admin` I can change due date which is defined in a release.
 
 As an `Admin` I have to be notified any time release status changes.
+
+As an `Admin` or `Triage Resource` or `Stakeholder` I can chat about the release using the release chat.
 
 #### Stage
 
@@ -100,9 +105,15 @@ As an `Admin` I can change the order of stage elements.
 
 #### Item
 
-As an `Admin` I can assign one or more items to a resource.
+As a `User` I can subscribe to an item.
 
-As an `Admin` I can change due date of item.
+As a `User` I can view the details of any item that is in the group I am a member of.
+
+As a `Resource` I can estimate the target date, and total hours that I need complete the work on the item.
+
+As a `Triage Resource` I can assign resources to the phases of items in my project.
+
+As a `Triage Resource` I can change details of the items in my project.
 
 
 #### Issue
@@ -127,7 +138,6 @@ As an `Admin` I can create a tag.
 
 As an `Admin` I can attach one or more tags to one or issues.
 
-
 #### Sprint
 
 As an `Admin` I can group some items into a sprint. So, the status of the newly created sprint will be
@@ -135,21 +145,18 @@ appeared in my dashboard.
 
 As a `Stakeholder` I can add a sprint into my dashboard to stay aware of that.
 
-
 #### Audit Log
 
-Every movement in whole environment will be tracked and recorded as an `Audit
-Log` entry.
+Every movement in the whole environment will be tracked and recorded as an `Audit
+Log` entry. Each item, project, and releaes have their own Audit Logs.
 
-As an `Admin` I can view, serach, group and filter audit-log entries with time,
+As a `User` I can view, search, group and filter audit-log entries with time,
 project, release, phase, sprint, and resource.
 
 
-name, contents and etc ...
-
 ## Phase 2
 
-##### This phase is in draft status
+##### Settings/Setup (Groups/Phases/Workflows/Users)
 
 As an `Admin`, I should be able to create a new User/Group/Workflow/Phase/Skill.
 
