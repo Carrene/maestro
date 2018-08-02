@@ -59,7 +59,7 @@ Staff may chat each other using provided platform.
 ### Projects
 
 - Back-end: [dolphin](https://github.com/Carrene/dolphin)
-- Web-front-end: -
+- Web-front-end: [flamingo](https://github.com/Carrene/flamingo)
 
 ### User stories
 
