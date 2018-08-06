@@ -41,7 +41,7 @@ Staff may chat each other using provided platform.
 - *Issue*: An unit of work which belongs to a project. Each issue will consider one or more items and has a status at a glance of time. The stakeholders of an issue are in touch on-line through the private room and can subscribe to get notifications on Issue status changes.
 - *Phase*: A point of operation to do an `issue`, `phases` will be chained to make a *Phase*: backlog, triage, development, test, QA and etc. Issues move between different `phases`, they can be in multiple phases simultaneously and initially each new item be put on the triage. Each phase has a response time, so the issues should move between them in determined time stamps.
 - *Milestone*: To encapsulate one or more issues within a time-span, milestones should not overlapped.
-- *Workflow*: A chain of various points of `project`. Each component of `workflow` will be set based on the order which `administrator` specifies. The progress of project procedure can be iterated on different components of stage.
+- *Workflow*: A chain of various phases of an issue. Each component of `workflow` will be set based on the order which `administrator` specifies. The progress of project procedure can be iterated on different components of workflow.
 - *Tag*: A label for defining an attribute of specific `issue` as a short statement.
 - *Item*: An `item` is shortest part of a `project`which is assigned to a `resource`. Each `issue` includes one or more `items`, also each `phaase` can icludes one or more `items`. 
 - *Sprint*: A simple view that constructed using one or more items.
