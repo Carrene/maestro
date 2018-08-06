@@ -39,11 +39,11 @@ Staff may chat each other using provided platform.
 `Stakeholders` of a `release` have a private chat room to be in touch on-line and can subscribe to be inform on each raised event for one of related `projects`. 
 - *Project*: A collection of `issues` which should be done as a part of the `release` provision. The `stakeholders` of a `project` can be in touch on-line at a private room of the `project` and subscribe to be get notifications on the `issues` events.
 - *Issue*: An unit of work which belongs to a project. Each issue will consider one or more items and has a status at a glance of time. The stakeholders of an issue are in touch on-line through the private room and can subscribe to get notifications on Issue status changes.
-- *Phase*: A point of operation to do an `issue`, `phases` will be chained to make a *Stage*: backlog, triage, development, test, QA and etc. Issues move between different `phases`, they can be in multiple phases simultaneously and initially each new item be put on the triage. Each phase has a response time, so the issues should move between them in determined time stamps.
+- *Phase*: A point of operation to do an `issue`, `phases` will be chained to make a *Phase*: backlog, triage, development, test, QA and etc. Issues move between different `phases`, they can be in multiple phases simultaneously and initially each new item be put on the triage. Each phase has a response time, so the issues should move between them in determined time stamps.
 - *Milestone*: To encapsulate one or more issues within a time-span, milestones should not overlapped.
-- *Stage*: A chain of various points of `project`. Each component of `stage` will be set based on the order which `administrator` specifies. The progress of project procedure can be iterated on different components of stage.
+- *Workflow*: A chain of various points of `project`. Each component of `workflow` will be set based on the order which `administrator` specifies. The progress of project procedure can be iterated on different components of stage.
 - *Tag*: A label for defining an attribute of specific `issue` as a short statement.
-- *Item*: An `item` is shortest part of a `project`which is assigned to a `resource`. Each `issue` includes one or more `items`, also each `stage` can icludes one or more `items`. 
+- *Item*: An `item` is shortest part of a `project`which is assigned to a `resource`. Each `issue` includes one or more `items`, also each `phaase` can icludes one or more `items`. 
 - *Sprint*: A simple view that constructed using one or more items.
 - *Audit-log*: As the name says.
 
@@ -92,15 +92,14 @@ As an `Admin` I have to be notified any time release status changes.
 
 As an `Admin` or `Triage Resource` or `Stakeholder` I can chat about the release using the release chat.
 
-#### Stage
+#### Workflow
 
-As an `Admin` I can create a stage for a project.
+As an `Admin` I can create a workflow for a project.
 
-As an `Admin` I can add/remove items to/from a stage.
+As an `Admin` I can assign/unassign a resource to/from an issue, so a new item will be created within the selected phase 
+or the default phase is selected based on the resource skill. An issue can be assigned to multiple resources in multiple phases simultaneously which leads to create multiple items, but it cannot be assigned to a resource twice.
 
-As an `Admin` I can define one or more items for an issue.
-
-As an `Admin` I can change the order of stage elements.
+As an `Admin` I can change the order of workflow phases.
 
 
 #### Item
