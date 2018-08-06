@@ -4,22 +4,24 @@ Meta repository for an awesome project management idea aka Maestro
 
 ## Goals
 
-- **Transparency** : In communications and relations between different corporation sections and stakeholders of a product
-- **Facility** : In interaction and communication between teams, resources, stakeholders, ...
+- **Transparency** : Maestro provides full transparancy for all projects and their items in the production line
+- **Accountability** : Maestro facilitates full accountability from each resource to keep up with their commitments
 
 ## Introduction
 
 Status: draft
 
 
-The aim is to make some monitors for managers and of course, some constraint
-and criteria to update the project status for assignee.
+Maeatro provides for tracking the real time progress of all projects in an entire organization or within a department.
+It provides senior executives a real time high level view of the timely progress of all projects.
+It provides project managers an automatic tracking of the progress of each issue within a project
+It provides each stakeholder an automatic alert to see changes in subscribed issue(s) of interest in real time. It also provides an intuitive chat mechanisem for them to voice their opnions to the team.
 
 The whole mechanism at a glance is something like a state-machine which gathers
 the status of each unit of work and aggregated result will be updated inside a
 monitoring environment.
 
-Staff may chat each other using provided platform.
+
 
 
 ### Tools and technologies
@@ -34,28 +36,32 @@ Staff may chat each other using provided platform.
 
 ### Entities
 
-- *Release*: A checkpoint which indicates the product is ready to shipped to
-	the end-user. It may needs that some `projects` in different sections of a corporation be done to release the product.
-`Stakeholders` of a `release` have a private chat room to be in touch on-line and can subscribe to be inform on each raised event for one of related `projects`. 
-- *Project*: A collection of `issues` which should be done as a part of the `release` provision. The `stakeholders` of a `project` can be in touch on-line at a private room of the `project` and subscribe to be get notifications on the `issues` events.
-- *Issue*: An unit of work which belongs to a project. Each issue will consider one or more items and has a status at a glance of time. The stakeholders of an issue are in touch on-line through the private room and can subscribe to get notifications on Issue status changes.
-- *Phase*: A point of operation to do an `issue`, `phases` will be chained to make a *Phase*: backlog, triage, development, test, QA and etc. Issues move between different `phases`, they can be in multiple phases simultaneously and initially each new item be put on the triage. Each phase has a response time, so the issues should move between them in determined time stamps.
-- *Milestone*: To encapsulate one or more issues within a time-span, milestones should not overlapped.
+"Issue": An unit of work which belongs to a project. Each issue will consider one or more items and has a status at a glance of time. A user can become a stakeholder of an issue by subscribing to the issue. The stakeholders are kept up to date via alrets (currently under unread tab) of any changes to the issue or new chats regarding the issue. Each issue has a private chat room for all stakeholders and interested parties (project managers, resources) to communicate about the issue.
+     Attribute list {name, description, }
+
+*Project*: A collection of `issues` which should be completed to be qualified for a `release` provision. Anyone who has access to the project view can participate in a private chat room reserved for the project. 
+     Attribute list (name, description, ..}
+
+*Release*: An entity to create a soft or hard deadline for launching one or more project
+
+"Workflow" : An entity defining a process composed of multiple phases through which an issue is worked on and completed
+             All workflows have two system phases called Triage and Backlog. All issues start in Triage
+	     
+*Phase*: The smallest segment in a workflow.  Multiple phases are chained to make a *workflow* e.g.(backlog, triage, development, test, QA ). Issues move between different `phases`, they can be in multiple phases simultaneously. Initially all new items are placed in triage phase. Each system phase has a Response Time, so the issues move between them in predictable time steps.
+- -----------*Milestone*: {this seems like a new concept to me. Massoud.}
 - *Workflow*: A chain of various phases of an issue. Each component of `workflow` will be set based on the order which `administrator` specifies. The progress of project procedure can be iterated on different components of workflow.
-- *Tag*: A label for defining an attribute of specific `issue` as a short statement.
-- *Item*: An `item` is shortest part of a `project`which is assigned to a `resource`. Each `issue` includes one or more `items`, also each `phaase` can icludes one or more `items`. 
-- *Sprint*: A simple view that constructed using one or more items.
-- *Audit-log*: As the name says.
+
+- *Sprint*: Issues within a project are segmented and organzied by the PM in Sprint bundles. Each Sprint bunlde will have a number of iterations to complete.
+- *Audit-log*: A detailed list of chages to attributes of issues/projects/releases
 
 ### Actors
 
-- *Admin*: Administrator.
-- *Guest*: A person who can be updated on events occur in a `release`.
-- *Triage Resource*: User who is assigned to the Triage Phase of the project, aka the Project Manager/Assistant Proj. mgr.
-- *Resource*: User who has any skill that can be assigned to a phase.
-- *Stakeholder*: A person(including administrators, guests, resources) which interested in one or more items. So, she/he 
-	should stay updated on the status of subscribed items. Although, she/he may write
-	comment for an item.
+- "user" : anyone with a userid, pwd
+- *Admin*: a users who can create other users and assign a role (common user or PM) or set permissions for the user 
+- *Guest*:{this is new to me - Massoud}.
+- *Users*: User who is assigned to the Triage Phase of the project, aka the Project Manager/Assistant Proj. mgr.
+- *Resource*: User with skills
+- *Stakeholder*: any user who is subscribed to one or more issues
 
 ### Projects
 
@@ -70,8 +76,8 @@ Staff may chat each other using provided platform.
 
 As an `Admin` I can create project with a unique title and optional descrition.
 
-As as `Admin` and or a `Stakeholder` I need to stay updated about one or more
-projects.
+As a `Stakeholder` I need to stay updated about one or more
+issues.
 
 As an `Admin` I can change due date which is defined in a project.
 
@@ -132,25 +138,19 @@ assigned to me.
 As an `Admin` I can define one or more items for an issue.
 
 #### Tag
+Tags are custom attributes of Issues 
 
-As an `Admin` I can create a tag.
+#### Sprint Bundle
 
-As an `Admin` I can attach one or more tags to one or issues.
+As an `Project Manager` I can group items into a Sprint Bundle. Each Sprint Bundle is activated and pushed through the workflow to be completed within a series of sprints
 
-#### Sprint
-
-As an `Admin` I can group some items into a sprint. So, the status of the newly created sprint will be
-appeared in my dashboard.
-
-As a `Stakeholder` I can add a sprint into my dashboard to stay aware of that.
 
 #### Audit Log
 
-Every movement in the whole environment will be tracked and recorded as an `Audit
-Log` entry. Each item, project, and releaes have their own Audit Logs.
+All changes with Issue, Project, or Relese entities will be tracked and recorded in an `Audit
+Log` and will be available in a tabular or chat format (ask me about this one!)
 
-As a `User` I can view, search, group and filter audit-log entries with time,
-project, release, phase, sprint, and resource.
+As a `User` I can view, search, group and filter audit-log entries 
 
 
 ## Phase 2
