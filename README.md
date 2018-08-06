@@ -59,7 +59,7 @@ monitoring environment.
 - "user" : anyone with a userid, pwd
 - *Admin*: a users who can create other users and assign a role (common user or PM) or set permissions for the user 
 - *Guest*:{this is new to me - Massoud}.
-- *Users*: User who is assigned to the Triage Phase of the project, aka the Project Manager/Assistant Proj. mgr.
+- *Project Manager*: User who is assigned to the Triage Phase of the project, aka the Project Manager/Assistant Proj. mgr.
 - *Resource*: User with skills
 - *Stakeholder*: any user who is subscribed to one or more issues
 
