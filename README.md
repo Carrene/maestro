@@ -66,7 +66,7 @@ monitoring environment.
 ### Projects
 
 - Back-end: [dolphin](https://github.com/Carrene/dolphin)
-- Web-front-end: -
+- Web-front-end: [flamingo](https://github.com/Carrene/flamingo)
 
 ### User stories
 
@@ -76,9 +76,11 @@ monitoring environment.
 
 ###### As an `Admin` I can create project with a unique title and optional descrition.
 
-###### As an `Project manager` I can update project attributes.
+###### As an `Admin` I can assign a `Manager` to a project.
 
-###### As an `Project manager` I can hide/show a project.
+###### As an `Manager` I can update project attributes.
+
+###### As an `Manager` I can hide/show a project.
 
 ###### As a `Stakeholder` I need to stay updated about one or more issues.
 
