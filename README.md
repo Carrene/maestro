@@ -130,9 +130,11 @@ monitoring environment.
 
 #### Issue
 
-###### As an `Admin` I can view, search, group and filter items with release, phase, name, time, contents and etc ...
+###### As an `Manager` I can define an issue.
 
-###### As an `Admin` I can append/remove one or more assignees to/from an issue.
+###### As an `Manager` I can view, search, group and filter items with release, phase, name, time, contents and etc ...
+
+###### As an `Manager` I can append/remove one or more assignees to/from an issue.
 
 ###### As a `Stakeholder` I can subscribe/unsubscribe an issue.
 
@@ -140,7 +142,7 @@ monitoring environment.
 
 ###### As a `Resource` I have to update the status of in-progress items which assigned to me.
 
-###### As an `Admin` I can define one or more items for an issue.
+###### As an `Manager` I can define one or more items for an issue.
 
 #### Tag
 ###### Tags are custom attributes of Issues 
