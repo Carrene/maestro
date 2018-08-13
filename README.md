@@ -76,8 +76,7 @@ monitoring environment.
 
 ###### As an `Admin` I can create project with a unique title and optional descrition.
 
-###### As a `Stakeholder` I need to stay updated about one or more
-issues.
+###### As a `Stakeholder` I need to stay updated about one or more issues.
 
 ###### As an `Admin` I can change due date which is defined in a project.
 
