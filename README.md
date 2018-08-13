@@ -92,6 +92,8 @@ monitoring environment.
 
 ###### As an `Admin` I can update release attributes.
 
+###### As an `Admin` I can abort a release.
+
 ###### A Release should be automatically marked with colors based on the status of it's items.
 
 ###### As an `Admin` I can change due date which is defined in a release.
