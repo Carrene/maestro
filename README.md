@@ -90,6 +90,8 @@ monitoring environment.
 
 ###### As an `Admin` I can create a release point for a product.
 
+###### As an `Admin` I can update release attributes.
+
 ###### A Release should be automatically marked with colors based on the status of it's items.
 
 ###### As an `Admin` I can change due date which is defined in a release.
