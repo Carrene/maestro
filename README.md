@@ -125,7 +125,7 @@ monitoring environment.
 
 ###### As a `Triage Resource` I can assign resources to the phases of items in my project.
 
-###### As a `Triage Resource` I can change details of the items in my project.
+###### As a `Triage Resource` I can change status of the items in my project.
 
 
 #### Issue
