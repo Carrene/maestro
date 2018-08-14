@@ -108,11 +108,13 @@ monitoring environment.
 
 #### Workflow
 
-###### As an `Admin` I can create a workflow for a project.
+###### As a `Manager` I can create a workflow for a project.
 
-###### As an `Admin` I can assign/unassign a resource to/from an issue, so a new item will be created within the selected phase or the default phase is selected based on the resource skill. An issue can be assigned to multiple resources in multiple phases simultaneously which leads to create multiple items, but it cannot be assigned to a resource twice.
+###### As a `Manager` I can create a phase for a workflow.
 
-###### As an `Admin` I can change the order of workflow phases.
+###### As a `Manager` I can assign/unassign a resource to/from an issue, so a new item will be created within the selected phase or the default phase is selected based on the resource skill. An issue can be assigned to multiple resources in multiple phases simultaneously which leads to create multiple items, but it cannot be assigned to a resource twice.
+
+###### As an `Manager` I can change the order of workflow phases.
 
 
 #### Item
