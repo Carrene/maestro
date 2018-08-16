@@ -46,7 +46,7 @@ monitoring environment.
 
 *Workflow*: An entity defining a process composed of multiple phases through which an issue is worked on and completed
             All workflows have two system phases called Triage and Backlog. All issues start in Triage
-	     
+
 *Phase*: The smallest segment in a workflow.  Multiple phases are chained to make a *workflow* e.g.(backlog, triage, development, test, QA ). Issues move between different `phases`, they can be in multiple phases simultaneously. Initially all new items are placed in triage phase. Each system phase has a Response Time, so the issues move between them in predictable time steps.
 - -----------*Milestone*: {this seems like a new concept to me. Massoud.}
 - *Workflow*: A chain of various phases of an issue. Each component of `workflow` will be set based on the order which `administrator` specifies. The progress of project procedure can be iterated on different components of workflow.
