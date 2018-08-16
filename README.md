@@ -74,9 +74,11 @@ monitoring environment.
 
 #### Project
 
-###### As an `Admin` I can create project with a unique title and optional descrition.
+###### As an `Admin` I can create project with a unique title and optional description.
 
 ###### As an `Admin` I can assign a `Manager` to a project.
+
+###### As a `Stakeholder` I can subscribe/unsubscribe a project.
 
 ###### As an `Manager` I can update project attributes.
 
@@ -95,6 +97,8 @@ monitoring environment.
 ###### As an `Admin` I can create a release point for a product.
 
 ###### As an `Admin` I can update release attributes.
+
+###### As a `Stakeholder` I can subscribe/unsubscribe a release.
 
 ###### As an `Admin` I can abort a release.
 
