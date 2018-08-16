@@ -98,7 +98,7 @@ monitoring environment.
 
 ###### As an `Admin` I can update release attributes.
 
-###### As a `Stakeholder` I can subscribe/unsubscribe a project.
+###### As a `Stakeholder` I can subscribe/unsubscribe a release.
 
 ###### As an `Admin` I can abort a release.
 
