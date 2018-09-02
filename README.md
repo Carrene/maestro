@@ -114,7 +114,17 @@ monitoring environment.
 
 ###### As a `Manager` I can create a workflow for a project.
 
+###### As a `Manager` I can remove a workflow from a project.
+
+###### As a `Manager` I can update *title* of workflow from a project.
+
 ###### As a `Manager` I can create a phase for a workflow.
+
+###### As a `Manager` I can remove a phase from a workflow.
+
+###### As a `Manager` I can update *title* of phase from a workflow.
+
+###### As a `Manager` I can update *order* of phase from a workflow.
 
 ###### As a `Manager` I can assign/unassign a resource to/from an issue, so a new item will be created within the selected phase or the default phase is selected based on the resource skill. An issue can be assigned to multiple resources in multiple phases simultaneously which leads to create multiple items, but it cannot be assigned to a resource twice.
 
