@@ -46,7 +46,7 @@ monitoring environment.
 
 *Workflow*: An entity defining a process composed of multiple phases through which an issue is worked on and completed
             All workflows have two system phases called Triage and Backlog. All issues start in Triage
-	     
+
 *Phase*: The smallest segment in a workflow.  Multiple phases are chained to make a *workflow* e.g.(backlog, triage, development, test, QA ). Issues move between different `phases`, they can be in multiple phases simultaneously. Initially all new items are placed in triage phase. Each system phase has a Response Time, so the issues move between them in predictable time steps.
 - -----------*Milestone*: {this seems like a new concept to me. Massoud.}
 - *Workflow*: A chain of various phases of an issue. Each component of `workflow` will be set based on the order which `administrator` specifies. The progress of project procedure can be iterated on different components of workflow.
@@ -114,7 +114,17 @@ monitoring environment.
 
 ###### As a `Manager` I can create a workflow for a project.
 
+###### As a `Manager` I can remove a workflow from a project.
+
+###### As a `Manager` I can update *title* of workflow from a project.
+
 ###### As a `Manager` I can create a phase for a workflow.
+
+###### As a `Manager` I can remove a phase from a workflow.
+
+###### As a `Manager` I can update *title* of phase from a workflow.
+
+###### As a `Manager` I can update *order* of phase from a workflow.
 
 ###### As a `Manager` I can assign/unassign a resource to/from an issue, so a new item will be created within the selected phase or the default phase is selected based on the resource skill. An issue can be assigned to multiple resources in multiple phases simultaneously which leads to create multiple items, but it cannot be assigned to a resource twice.
 
