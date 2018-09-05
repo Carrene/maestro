@@ -182,7 +182,7 @@ monitoring environment.
 
 #### CAS
 
-###### As a `CAS member` I can authenticate using CAS account. 
+###### As a `CAS member` I can authenticate using CAS account to join.
 
 ## Phase 2
 
