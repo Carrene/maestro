@@ -174,6 +174,9 @@ monitoring environment.
 
 ###### As a `User` I can view, search, group and filter audit-log entries 
 
+#### CAS
+
+###### As a `CAS member` I can authenticate using CAS account. 
 
 ## Phase 2
 
