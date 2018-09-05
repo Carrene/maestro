@@ -110,6 +110,12 @@ monitoring environment.
 
 ###### As an `Admin` or `Triage Resource` or `Stakeholder` I can chat about the release using the release chat.
 
+#### Group
+
+###### As an `Admin` I can create a group with unique title.
+
+###### As an `Admin` I can place one or more projects into the group.
+
 #### Workflow
 
 ###### As a `Manager` I can create a workflow for a project.
