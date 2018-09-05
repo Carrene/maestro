@@ -110,6 +110,12 @@ monitoring environment.
 
 ###### As an `Admin` or `Triage Resource` or `Stakeholder` I can chat about the release using the release chat.
 
+#### Group
+
+###### As an `Admin` I can create a group with unique title.
+
+###### As an `Admin` I can place one or more projects into the group.
+
 #### Workflow
 
 ###### As a `Manager` I can create a workflow for a project.
@@ -174,6 +180,9 @@ monitoring environment.
 
 ###### As a `User` I can view, search, group and filter audit-log entries 
 
+#### CAS
+
+###### As a `CAS member` I can authenticate using CAS account to join.
 
 ## Phase 2
 
