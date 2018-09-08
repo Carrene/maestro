@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+mkdir /usr/local/maestro/dolphin
+
+chown :maestro /usr/local/maestro
+
 git clone -b nightly git@github.com:Carrene/dolphin.git /usr/local/maestro/dolphin
 
 

@@ -3,7 +3,7 @@
 
 apt update
 
-apt install nginx redis-server postgresql git build-essential \
+apt install -y nginx redis-server postgresql git build-essential \
     libncursesw5-dev libreadline6-dev libssl-dev libgdbm-dev \
     libc6-dev iptables-persistent 
 

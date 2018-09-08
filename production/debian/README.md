@@ -1,7 +1,12 @@
-
 # Maestro Installation instruction
 
-Note: all commands in this file should be issued by the `root` user.
+Note: all commands in this file should be issued by the sudoer user.
+
+To do that:
+
+```bash
+sudo adduser $USER sudo
+```
 
 ### Before running the scripts
 
@@ -13,11 +18,27 @@ deb-src http://archive.ubuntu.com/ubuntu/ xenial main restricted
 deb-src http://archive.ubuntu.com/ubuntu/ xenial-updates main restricted
 ```
 
+#### IPv4
+Open `/etc/gai.conf`
+
+Uncomment the following line:
+
+``` bash
+#
+# For sites which prefer IPv4 connections change the last line to
+# precedence ::ffff:0:0/96 100
+```
+
+And run the following command:
+
+``` bash
+echo 'Acquire::ForceIPv4 "true";' | sudo tee /etc/apt/apt.conf.d/99force-ipv4
+```
+
 ```bash
 apt update
 apt dist-upgrade
 ```
-
 
 ### Time
 
@@ -29,12 +50,17 @@ Select Asia/Tehran
 
 ### Dolphin:
 
+
+```bash
+sudo adduser $USER sudo
+```
+
 #### Deploy key
 
 Insert your email in the next line, then enter a pass phrase for the key twice. 
 
 ```bash
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com" -f nigthly-dolphin
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com" -f ~/.ssh/nigthly-dolphin
 ```
 
 Start the ssh-agent in the background.
@@ -56,7 +82,6 @@ Then follow [Github instruction](https://developer.github.com/v3/guides/managing
 #### Deploying
 
 Copy this directory on the maestro server and login to it as the root:
-
 
 ```
 ./pre-install.sh
