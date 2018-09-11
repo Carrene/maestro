@@ -76,7 +76,6 @@ sudo systemctl daemon-reload
 sudo systemctl enable dolphin.service 
 sudo service dolphin start 
 
-
 sudo rm /etc/nginx/sites-enabled/default
 
 echo "
@@ -101,4 +100,3 @@ server {
 sudo ln -s /etc/nginx/sites-available/dolphin.conf /etc/nginx/sites-enabled/
 
 sudo service nginx restart
-
