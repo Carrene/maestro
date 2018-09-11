@@ -1,4 +1,3 @@
-
 # Alpha deployment instruction
 
 ### Before running the scripts
@@ -67,4 +66,3 @@ And finally, install dolphin-nightly by running `nightly-dolphin.sh` script:
 ```bash
 ./nightly-dolphin.sh
 ```
-
