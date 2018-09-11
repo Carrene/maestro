@@ -5,7 +5,7 @@ set -e
 sudo apt update
 
 sudo -H apt install -y nginx redis-server postgresql git build-essential \
-    libgdbm-dev iptables-persistent python3-dev
+    libpq-dev iptables-persistent python3-dev
 
 sudo -H pip3.6 install pip --upgrade
 
