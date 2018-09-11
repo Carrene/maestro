@@ -1,32 +1,23 @@
 #!/usr/bin/env bash
 
+set -e
 
-apt update
+sudo apt update
 
-apt install -y nginx redis-server postgresql git build-essential \
-    libncursesw5-dev libreadline6-dev libssl-dev libgdbm-dev \
-    libc6-dev iptables-persistent 
+sudo -H apt install -y nginx redis-server postgresql git build-essential \
+    libgdbm-dev iptables-persistent python3-dev
 
+sudo -H pip3.6 install pip --upgrade
 
-useradd -r maestro
-
-
-# python3.6
-apt build-dep python3.5
-cd /tmp
-wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tar.xz
-tar -xvf Python-3.6.*.tar.xz
-cd Python-3.6.*
-./configure
-make -j4
-make altinstall
-
-
-mkdir -p /etc/maestro
-mkdir -p /var/log/maestro
-chown maestro /var/log/maestro
-
+sudo mkdir -p /etc/maestro
+sudo mkdir -p /var/log/maestro
+sudo mkdir -p /usr/local/maestro
+sudo chown maestro /var/log/maestro
+sudo chown -R maestro:maestro /usr/local/maestro
+sudo chmod 775 /usr/local/maestro
 
 echo "CREATE USER maestro" | sudo -u postgres psql
-echo "listen_addresses = ''" >> /etc/postgresql/9.5/main/postgresql.conf
-service postgresql restart
+echo "listen_addresses = ''" | sudo tee -a \
+	/etc/postgresql/10/main/postgresql.conf
+sudo service postgresql restart
+
