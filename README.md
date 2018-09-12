@@ -101,7 +101,7 @@ monitoring environment.
 
 #### Project
 
-###### As an `Admin` I can create project with a unique title and optional description.
+###### As an `Admin` I can create project with a unique title and optional description. Immediately a chat room related to created project will be created.
 
 ###### As an `Admin` I can assign a `Project Manager` to a project.
 
