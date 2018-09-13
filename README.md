@@ -37,7 +37,8 @@ monitoring environment.
 ### Entities
 
 *Issue*: An unit of work which belongs to a project. Each issue will consider one or more items and has a status at a glance of time. A user can become a stakeholder of an issue by subscribing to the issue. The stakeholders are kept up to date via alrets (currently under unread tab) of any changes to the issue or new chats regarding the issue. Each issue has a private chat room for all stakeholders and interested parties (project managers, resources) to communicate about the issue.
-     Attribute list {name, description, }
+     non-critical attributes: {name, description, (everything except for (St/End/EstHrs)}
+     critical attricutes: Start/End/Estimated Hours
 
 *Project*: A collection of `issues` which should be completed to be qualified for a `release` provision. Anyone who has access to the project view can participate in a private chat room reserved for the project. 
      Attribute list (name, description, ..}
@@ -56,12 +57,20 @@ monitoring environment.
 
 ### Actors
 
-- *user* : anyone with a userid, pwd
-- *Admin*: a users who can create other users and assign a role (common user or PM) or set permissions for the user 
-- *Guest*:{this is new to me - Massoud}.
-- *Project Manager*: User who is assigned to the Triage Phase of the project, aka the Project Manager/Assistant Proj. mgr.
-- *Resource*: User with skills
+- *common user* : anyone with a userid, pwd
 - *Stakeholder*: any user who is subscribed to one or more issues
+- *Resource*: user with at least one skill
+- *Project Manager*: user who has the '*Project Manager' skill. To become the Project Manager of a specific project, the User is assigned to the Triage Phase of the project.
+- *Release Manager*: user who has the '*Release Manager' skill.
+- *Admin*: a special attribute that can be assigned to any user in order to handle administrative tasks such as: setting up users, skills, phases, workflows, calendar settings, and other general settings
+
+- *Guest*:{this is new to me - Massoud}.
+
+*System Tagged Skills:
+     -Phase task can be assigned to Resources with the associated Phase skill
+     -Project(s) can only be assihned to Resource with Project Manager skill
+     -Release(s) can only be assigned to Resource with Release Manager skill
+
 
 ### Projects
 
@@ -76,21 +85,23 @@ monitoring environment.
 
 ###### As an `Admin` I can create project with a unique title and optional description.
 
-###### As an `Admin` I can assign a `Manager` to a project.
-
-###### As a `Stakeholder` I can subscribe/unsubscribe a project.
-
-###### As an `Manager` I can update project attributes.
-
-###### As an `Manager` I can hide/show a project.
-
-###### As a `Stakeholder` I need to stay updated about one or more issues.
+###### As an `Admin` I can assign a `Project Manager` to a project.
 
 ###### As an `Admin` I can change due date which is defined in a project.
 
 ###### As an `Admin` I have to be notified any time project status changes.
 
 ###### As an `Admin` or `Triage Resource` or `Stakeholder` I can chat about the project using the project chat.
+
+###### As a `Stakeholder` I need to stay updated about one or more issues.
+
+###### As a `Stakeholder` I can subscribe/unsubscribe a project.
+
+###### As a `Project Manager` I can assign nuggets to resources.
+
+###### As a `Project Manager` I can update project attributes.
+
+###### As a `Project Manager` I can update the nuggets non-critical attributes.
 
 #### Release
 
@@ -137,17 +148,17 @@ monitoring environment.
 ###### As an `Manager` I can change the order of workflow phases.
 
 
-#### Item
+#### Nugget
 
-###### As a `User` I can subscribe to an item.
+###### As a `User` I can subscribe to an nugget.
 
-###### As a `User` I can view the details of any item that is in the group I am a member of.
+###### As a `User` I can view the details of any nugget that is in the group I am a member of.
 
-###### As a `Resource` I can estimate the target date, and total hours that I need complete the work on the item.
+###### As a `Resource` I can estimate the target date, and total hours that I need complete the work on the nugget.
 
-###### As a `Triage Resource` I can assign resources to the phases of items in my project.
+###### As a `Triage Resource` I can assign resources to the phases of nuggets in my project.
 
-###### As a `Triage Resource` I can change status of the items in my project.
+###### As a `Triage Resource` I can change status of the nuggets in my project.
 
 
 #### Issue
