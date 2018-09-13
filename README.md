@@ -101,9 +101,9 @@ monitoring environment.
 
 #### Project
 
-###### As an `Admin` I can create project with a unique title and optional description. Immediately a chat room related to created project will be created.
+###### As an `Admin` I can create project with a unique title and optional description. Immediately a **chat room** related to created project will be created.
 
-###### As an `Admin` I can assign a `Project Manager` to a project.
+###### As an `Admin` I can assign a `Manager` to a project. Immediately the assigened manager will be added to chat room related to project. When another manager replaced with current project manager, the unassigned manager will be removed from the specific chat room.
 
 ###### As an `Admin` I can change due date which is defined in a project.
 
@@ -120,6 +120,8 @@ monitoring environment.
 ###### As a `Project Manager` I can update project attributes.
 
 ###### As a `Project Manager` I can update the nuggets non-critical attributes.
+
+###### As an `Admin` I can view, search, group and filter projects with title, due date, description, chat room and etc ...
 
 #### Release
 
@@ -138,6 +140,8 @@ monitoring environment.
 ###### As an `Admin` I have to be notified any time release status changes.
 
 ###### As an `Admin` or `Triage Resource` or `Stakeholder` I can chat about the release using the release chat.
+
+###### As an `Admin` I can view, search, group and filter releases with related projects, title, description and etc ...
 
 #### Group
 
@@ -161,7 +165,7 @@ monitoring environment.
 
 ###### As a `Manager` I can update *order* of phase from a workflow.
 
-###### As a `Manager` I can assign/unassign a resource to/from an issue, so a new item will be created within the selected phase or the default phase is selected based on the resource skill. An issue can be assigned to multiple resources in multiple phases simultaneously which leads to create multiple items, but it cannot be assigned to a resource twice.
+###### As a `Manager` I can assign/unassign a resource to/from an issue, so a new item will be created within the selected phase or the default phase is selected based on the resource skill. An issue can be assigned to multiple resources in multiple phases simultaneously which leads to create multiple items, but it cannot be assigned to a resource twice. Just after assigning, resource will be added to chat room of project which that issue is in. So that when unassign an issue from a resource, the resource will be removed from the chat box of project which issue is in. 
 
 ###### As an `Manager` I can change the order of workflow phases.
 
