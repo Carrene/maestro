@@ -2,6 +2,8 @@
 
 ### Before running the scripts
 
+This document is provided to deploy on *Ubuntu 16.04*.
+
 You should have installed **python3.6**.
 
 Add `universe` package to `apt` sources, Then:

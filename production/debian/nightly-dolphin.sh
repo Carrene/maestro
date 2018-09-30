@@ -55,7 +55,6 @@ echo "
 Description=Maestro Back-end REST API (nightly)
 After=network.target
 [Service]
-Environment="DOLPHIN_CONFIG_FILE=/etc/maestro/dolphin.yml"
 PIDFile=/run/maestro/dolphin.pid
 User=maestro
 Group=maestro
@@ -64,8 +63,8 @@ ExecStart=/usr/local/bin/gunicorn --workers 2 \
 	--pid /run/maestro/dolphin.pid \
 	--chdir /etc/maestro \
 	dolphinwsgi:app
-ExecReload=/bin/kill -s HUP \$MAINPID
-ExecStop=/bin/kill -s TERM \$MAINPID
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s TERM $MAINPID
 PrivateTmp=true
 [Install]
 WantedBy=multi-user.target

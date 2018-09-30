@@ -18,6 +18,6 @@ sudo chmod 775 /usr/local/maestro
 
 echo "CREATE USER maestro" | sudo -u postgres psql
 echo "listen_addresses = ''" | sudo tee -a \
-	/etc/postgresql/10/main/postgresql.conf
+	/etc/postgresql/9.5/main/postgresql.conf
 sudo service postgresql restart
 
