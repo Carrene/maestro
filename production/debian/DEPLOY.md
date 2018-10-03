@@ -1,4 +1,4 @@
-# Alpha deployment instruction
+# Maestro deployment instruction
 
 ### Before running the scripts
 
