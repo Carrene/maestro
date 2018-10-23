@@ -99,6 +99,7 @@ monitoring environment.
 
 ## Phase 1
 
+
 #### Project
 
 ###### As an `Admin` I can create project with a unique title and optional description. Immediately a **chat room** related to created project will be created.
@@ -123,6 +124,7 @@ monitoring environment.
 
 ###### As an `Admin` I can view, search, group and filter projects with title, due date, description, chat room and etc ...
 
+
 #### Release
 
 ###### As an `Admin` I can create a release point for a product.
@@ -143,31 +145,38 @@ monitoring environment.
 
 ###### As an `Admin` I can view, search, group and filter releases with related projects, title, description and etc ...
 
+
 #### Group
 
 ###### As an `Admin` I can create a group with unique title.
 
 ###### As an `Admin` I can place one or more projects into the group.
 
+
 #### Workflow
 
-###### As a `Manager` I can create a workflow for a project.
+###### As a `Manager` I can create a workflow. So, a `Manager` can set a Workflow on Project.
 
-###### As a `Manager` I can remove a workflow from a project.
+###### As a `Manager` I can remove a workflow.
 
-###### As a `Manager` I can update *title* of workflow from a project.
-
-###### As a `Manager` I can create a phase for a workflow.
-
-###### As a `Manager` I can remove a phase from a workflow.
-
-###### As a `Manager` I can update *title* of phase from a workflow.
-
-###### As a `Manager` I can update *order* of phase from a workflow.
+###### As a `Manager` I can update title of workflow.
 
 ###### As a `Manager` I can assign/unassign a resource to/from an issue, so a new item will be created within the selected phase or the default phase is selected based on the resource skill. An issue can be assigned to multiple resources in multiple phases simultaneously which leads to create multiple items, but it cannot be assigned to a resource twice. Just after assigning, resource will be added to chat room of project which that issue is in. So that when unassign an issue from a resource, the resource will be removed from the chat box of project which issue is in. 
 
-###### As an `Manager` I can change the order of workflow phases.
+###### As a `Manager` I can view, search, group and filter workflows with title, etc ...
+
+
+#### Phase
+
+###### As a `Manager` I can create a phase for a workflow.
+
+###### As a `Manager` I can update title of a phase of a workflow.
+
+###### As a `Manager` I can update order of a phase of a workflow.
+
+###### As a 'Manager` I can remove a phase from workflow.
+
+###### As a `Manager` I can view, search, group and filter phases with title, order and etc ...
 
 
 #### Nugget
