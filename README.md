@@ -114,7 +114,7 @@ monitoring environment.
 
 ###### As a `Stakeholder` I need to stay updated about one or more issues.
 
-###### As a `Stakeholder` I can subscribe/unsubscribe a project.
+###### As a `Stakeholder` I can subscribe/unsubscribe a project. So I will be added to subscribed project after that.
 
 ###### As a `Project Manager` I can assign nuggets to resources.
 
@@ -194,13 +194,13 @@ monitoring environment.
 
 #### Issue
 
-###### As an `Manager` I can define an issue.
+###### As an `Manager` I can define an issue. Immediately a **chat room** related to created issue will be created.
 
 ###### As an `Manager` I can view, search, group and filter items with release, phase, name, time, contents and etc ...
 
 ###### As an `Manager` I can append/remove one or more assignees to/from an issue.
 
-###### As a `Stakeholder` I can subscribe/unsubscribe an issue.
+###### As a `Stakeholder` I can subscribe/unsubscribe an issue. So I will be added to subscribed issue after that.
 
 ###### As a `Stakeholder` I can write a comment for an update.
 
