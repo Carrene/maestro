@@ -2,6 +2,16 @@
 
 Meta repository for an awesome project management idea aka Maestro
 
+## Compability Table
+
+The table containing projects related to Maestro:
+
+#### Nightly
+
+| Dolphin       | Panda         | Jaguar        | Flamingo       | Crane          |
+| ------------- | ------------- | ------------- | -------------- | -------------- |
+| v0.9.0nightly | v0.2.0nightly | v0.2.0nightly | v0.2.0-nightly | v0.1.0-nightly |
+
 ## Goals
 
 - **Transparency** : Maestro provides full transparancy for all projects and their items in the production line
