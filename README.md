@@ -124,6 +124,8 @@ monitoring environment.
 
 ###### As an `Admin` I can view, search, group and filter projects with title, due date, description, chat room and etc ...
 
+###### As a `Member` I can attach a file to the `Project`.
+
 
 #### Release
 
@@ -207,6 +209,8 @@ monitoring environment.
 ###### As a `Resource` I have to update the status of in-progress items which assigned to me.
 
 ###### As an `Manager` I can define one or more items for an issue.
+
+###### As a `Member` I can attach a file to the `Issue`.
 
 ###### As a `Member`, I can move an issue from its project to another project.
 
