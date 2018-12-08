@@ -216,6 +216,7 @@ monitoring environment.
 
 ###### As an `owner`, I can `INVITE` a member to my organization.
 
+###### As a `member`, I can `JOIN` to an organization using the invitation a link.
 
 ## Phase 2
 
