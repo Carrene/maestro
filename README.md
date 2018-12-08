@@ -214,6 +214,8 @@ monitoring environment.
 
 ###### As an `owner`, I can `UPDATE` my organization.
 
+###### As an `owner`, I can `INVITE` a member to my organization.
+
 
 ## Phase 2
 
