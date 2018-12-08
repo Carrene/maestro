@@ -212,6 +212,9 @@ monitoring environment.
 
 ###### As a `member`, I can `CREATE` my organization.
 
+###### As an `owner`, I can `UPDATE` my organization.
+
+
 ## Phase 2
 
 ##### Settings/Setup (Groups/Phases/Workflows/Users)
