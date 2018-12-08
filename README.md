@@ -208,6 +208,10 @@ monitoring environment.
 
 ###### As a `CAS member` I can authenticate using CAS account to join.
 
+#### Organization
+
+###### As a `member`, I can `CREATE` my organization.
+
 ## Phase 2
 
 ##### Settings/Setup (Groups/Phases/Workflows/Users)
