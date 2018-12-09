@@ -218,6 +218,8 @@ monitoring environment.
 
 ###### As a `member`, I can `JOIN` to an organization using the invitation a link.
 
+###### As a `member`, I can `LSIT` members of one of my organizations.
+
 ## Phase 2
 
 ##### Settings/Setup (Groups/Phases/Workflows/Users)
