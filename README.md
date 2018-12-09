@@ -222,6 +222,8 @@ monitoring environment.
 
 ###### As an `anonymous`, I can `LIST` all of organization.
 
+###### As a `member`, I can `LIST` all of my organization.
+
 ## Phase 2
 
 ##### Settings/Setup (Groups/Phases/Workflows/Users)
