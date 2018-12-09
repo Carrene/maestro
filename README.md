@@ -220,6 +220,8 @@ monitoring environment.
 
 ###### As a `member`, I can `LSIT` members of one of my organizations.
 
+###### As an `anonymous`, I can `LIST` all of organization.
+
 ## Phase 2
 
 ##### Settings/Setup (Groups/Phases/Workflows/Users)
