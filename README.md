@@ -224,6 +224,8 @@ monitoring environment.
 
 ###### As a `member`, I can `LIST` all of my organization.
 
+###### As a `member`, I can `GET` one of my organizations.
+
 ## Phase 2
 
 ##### Settings/Setup (Groups/Phases/Workflows/Users)
