@@ -191,6 +191,8 @@ monitoring environment.
 
 ###### As an `Manager` I can define one or more items for an issue.
 
+###### As a `Member`, I can move an issue from its project to another project.
+
 #### Tag
 ###### Tags are custom attributes of Issues 
 
