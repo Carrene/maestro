@@ -196,6 +196,8 @@ monitoring environment.
 #### Tag
 ###### Tags are custom attributes of Issues 
 
+###### As a `Member`, I can `LIST` the tags.
+
 #### Sprint Bundle
 
 ###### As an `Project Manager` I can group items into a Sprint Bundle. Each Sprint Bundle is activated and pushed through the workflow to be completed within a series of sprints
