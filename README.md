@@ -200,11 +200,11 @@ monitoring environment.
 
 ###### As a `Member`, I can `ADD` a tag to a draft issue.
 
-###### As a `Member`, I can `ADD` a tag to a issue.
+###### As a `Member`, I can `ADD` a tag to an issue.
 
 ###### As a `Member`, I can `REMOVE` a tag from a draft issue.
 
-###### As a `Member`, I can `REMOVE` a tag from a issue.
+###### As a `Member`, I can `REMOVE` a tag from an issue.
 
 #### Sprint Bundle
 
