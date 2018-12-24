@@ -198,6 +198,14 @@ monitoring environment.
 
 ###### As a `Member`, I can `LIST` the tags.
 
+###### As a `Member`, I can `ADD` a tag to a draft issue.
+
+###### As a `Member`, I can `ADD` a tag to a issue.
+
+###### As a `Member`, I can `REMOVE` a tag from a draft issue.
+
+###### As a `Member`, I can `REMOVE` a tag from a issue.
+
 #### Sprint Bundle
 
 ###### As an `Project Manager` I can group items into a Sprint Bundle. Each Sprint Bundle is activated and pushed through the workflow to be completed within a series of sprints
