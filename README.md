@@ -200,7 +200,7 @@ monitoring environment.
 ###### As a `Member`, I can `FINALIZE` a draft issue.
 
 #### Tag
-###### Tags are custom attributes of Issues 
+###### Tags are custom attributes of Issues. 
 
 ###### As a `Member`, I can `LIST` the tags.
 
@@ -210,7 +210,10 @@ monitoring environment.
 
 ###### As a `Member`, I can `REMOVE` a tag from a draft issue.
 
-###### As a `Member`, I can `REMOVE` a tag from an issue.
+###### As a `Member`, I can `REMOVE` a tag from an issue..
+
+#### Resource
+###### As a `member`, I can `LIST` resources of a phase.
 
 #### Sprint Bundle
 
