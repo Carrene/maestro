@@ -41,5 +41,3 @@ Un-comment the following line starting with `precedence` :
 sudo apt install libass-dev libpq-dev postgresql \
     build-essential redis-server redis-tools
 ```
->>>>>>> corrected IPv6 method using only GRUB
-
