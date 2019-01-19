@@ -99,11 +99,12 @@ monitoring environment.
 
 ## Phase 1
 
+
 #### Project
 
-###### As an `Admin` I can create project with a unique title and optional description.
+###### As an `Admin` I can create project with a unique title and optional description. Immediately a **chat room** related to created project will be created.
 
-###### As an `Admin` I can assign a `Project Manager` to a project.
+###### As an `Admin` I can assign a `Manager` to a project. Immediately the assigened manager will be added to chat room related to project. When another manager replaced with current project manager, the unassigned manager will be removed from the specific chat room.
 
 ###### As an `Admin` I can change due date which is defined in a project.
 
@@ -113,13 +114,18 @@ monitoring environment.
 
 ###### As a `Stakeholder` I need to stay updated about one or more issues.
 
-###### As a `Stakeholder` I can subscribe/unsubscribe a project.
+###### As a `Stakeholder` I can subscribe/unsubscribe a project. So I will be added to subscribed project after that.
 
 ###### As a `Project Manager` I can assign nuggets to resources.
 
 ###### As a `Project Manager` I can update project attributes.
 
 ###### As a `Project Manager` I can update the nuggets non-critical attributes.
+
+###### As an `Admin` I can view, search, group and filter projects with title, due date, description, chat room and etc ...
+
+###### As a `Member` I can attach a file to the `Project`.
+
 
 #### Release
 
@@ -139,31 +145,40 @@ monitoring environment.
 
 ###### As an `Admin` or `Triage Resource` or `Stakeholder` I can chat about the release using the release chat.
 
+###### As an `Admin` I can view, search, group and filter releases with related projects, title, description and etc ...
+
+
 #### Group
 
 ###### As an `Admin` I can create a group with unique title.
 
 ###### As an `Admin` I can place one or more projects into the group.
 
+
 #### Workflow
 
-###### As a `Manager` I can create a workflow for a project.
+###### As a `Manager` I can create a workflow. So, a `Manager` can set a Workflow on Project.
 
-###### As a `Manager` I can remove a workflow from a project.
+###### As a `Manager` I can remove a workflow.
 
-###### As a `Manager` I can update *title* of workflow from a project.
+###### As a `Manager` I can update title of workflow.
+
+###### As a `Manager` I can assign/unassign a resource to/from an issue, so a new item will be created within the selected phase or the default phase is selected based on the resource skill. An issue can be assigned to multiple resources in multiple phases simultaneously which leads to create multiple items, but it cannot be assigned to a resource twice. Just after assigning, resource will be added to chat room of project which that issue is in. So that when unassign an issue from a resource, the resource will be removed from the chat box of project which issue is in. 
+
+###### As a `Manager` I can view, search, group and filter workflows with title, etc ...
+
+
+#### Phase
 
 ###### As a `Manager` I can create a phase for a workflow.
 
-###### As a `Manager` I can remove a phase from a workflow.
+###### As a `Manager` I can update title of a phase of a workflow.
 
-###### As a `Manager` I can update *title* of phase from a workflow.
+###### As a `Manager` I can update order of a phase of a workflow.
 
-###### As a `Manager` I can update *order* of phase from a workflow.
+###### As a 'Manager` I can remove a phase from workflow.
 
-###### As a `Manager` I can assign/unassign a resource to/from an issue, so a new item will be created within the selected phase or the default phase is selected based on the resource skill. An issue can be assigned to multiple resources in multiple phases simultaneously which leads to create multiple items, but it cannot be assigned to a resource twice.
-
-###### As an `Manager` I can change the order of workflow phases.
+###### As a `Manager` I can view, search, group and filter phases with title, order and etc ...
 
 
 #### Nugget
@@ -181,19 +196,21 @@ monitoring environment.
 
 #### Issue
 
-###### As an `Manager` I can define an issue.
+###### As an `Manager` I can define an issue. Immediately a **chat room** related to created issue will be created.
 
 ###### As an `Manager` I can view, search, group and filter items with release, phase, name, time, contents and etc ...
 
 ###### As an `Manager` I can append/remove one or more assignees to/from an issue.
 
-###### As a `Stakeholder` I can subscribe/unsubscribe an issue.
+###### As a `Stakeholder` I can subscribe/unsubscribe an issue. So I will be added to subscribed issue after that.
 
 ###### As a `Stakeholder` I can write a comment for an update.
 
 ###### As a `Resource` I have to update the status of in-progress items which assigned to me.
 
 ###### As an `Manager` I can define one or more items for an issue.
+
+###### As a `Member` I can attach a file to the `Issue`.
 
 ###### As a `Member`, I can move an issue from its project to another project.
 
