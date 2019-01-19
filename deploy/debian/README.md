@@ -1,7 +1,9 @@
-# Debian-based OS fresh install guide
-Here we are preparing fresh machine for use.
+# Debian fresh install guide
+
+here we are preparing fresh machine for use.
 
 #### IP Setings
+
 At first, we are configuring IP settings.
 
 ##### IPv6 Disableing
@@ -39,3 +41,4 @@ Un-comment the following line starting with `precedence` :
 sudo apt install libass-dev libpq-dev postgresql \
     build-essential redis-server redis-tools
 ```
+
