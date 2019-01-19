@@ -214,11 +214,14 @@ monitoring environment.
 
 ###### As a `Member`, I can move an issue from its project to another project.
 
+###### AS a `Member`, I can unassign an issue from a resource and phase.
+
 #### Draft Issue
 
 ###### As a `Member`, I can `DEFINE` a draft issue.
 
 ###### As a `Member`, I can `FINALIZE` a draft issue.
+
 
 #### Tag
 ###### Tags are custom attributes of Issues. 
