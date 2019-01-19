@@ -35,3 +35,7 @@ Un-comment the following line starting with `precedence` :
 
 #### Dependencies Setup
 
+``` bash
+sudo apt install libass-dev libpq-dev postgresql \
+    build-essential redis-server redis-tools
+```
