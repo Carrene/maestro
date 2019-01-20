@@ -289,17 +289,17 @@ monitoring environment.
 
 #### Authorization
 
-###### As a `Resource`, I can have atleast one or many role(s), so I will in-change to do all permitted actions of my roles.
+###### As a `Resource`, I can have at least one or many role(s), so I will in-charge to all permitted actions of my roles.
 
-###### As an `Admin`, I can append one or many role(s) to specific resource, so the mention resource can do all permitted actions of her roles.
+###### As an `Admin`, I can append one or many role(s) to specific resource, so the mentioned resource can do all permitted actions of her roles.
 
-###### As an `Admin`, I can list all resource with their roles.
+###### As an `Admin`, I can list all resources with their roles.
 
-###### As an `Admin`, I can remove one or many role(s) from specific resource except removing admin form herself, so the mention source can not do the actions of the removed role(s) anymore.
+###### As an `Admin`, I can remove one or many role(s) from specific resource except removing admin form herself, so the mentioned source can not do the actions of the removed role(s) anymore.
 
 ###### As an `Admin`, I can append one or many action(s) to a role, so all do a resource which have the changed role will be permitted to do newly added actions.
 
-###### As an `Admin`, I can remove one or many action(s) to a role, so all resource which have the changed role will be permitted to do removed actions.
+###### As an `Admin`, I can remove one or many action(s) to a role, so all resources which have the changed role will be permitted to do removed actions.
 
 ###### As an `Admin`, I can define a new role.
 
