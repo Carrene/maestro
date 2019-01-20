@@ -217,6 +217,8 @@ monitoring environment.
 
 ###### AS a `Member`, I can unassign an issue from a resource and phase.
 
+###### AS a `Member`, I can see an issue that I subscribed.
+
 #### Draft Issue
 
 ###### As a `Member`, I can `DEFINE` a draft issue.
