@@ -178,7 +178,7 @@ monitoring environment.
 
 ###### As a `Manager` I can update order of a phase of a workflow.
 
-###### As a 'Manager` I can remove a phase from workflow.
+###### As a `Manager` I can remove a phase from workflow.
 
 ###### As a `Manager` I can view, search, group and filter phases with title, order and etc ...
 
@@ -289,4 +289,22 @@ monitoring environment.
 ###### As an `Admin`, I will be not be able to edit an active Workflow/Phase.
 
 ###### As an `Admin`, I should be able to give users certain skills.
+
+#### Authorization
+
+###### As a `Resource`, I can have at least one or many role(s), so I will in-charge to all permitted actions of my roles.
+
+###### As an `Admin`, I can append one or many role(s) to a specific resource, so the mentioned resource can do all permitted actions of her roles.
+
+###### As an `Admin`, I can list all resources with their roles.
+
+###### As an `Admin`, I can remove one or many role(s) from a specific resource except removing admin form herself, so the mentioned source cannot do the actions of the removed role(s) anymore.
+
+###### As an `Admin`, I can append one or many action(s) to a role, so all resources which have the changed role will be permitted to do newly added actions.
+
+###### As an `Admin`, I can remove one or many action(s) to a role, so all resources which have the changed role will not be permitted to do removed actions.
+
+###### As an `Admin`, I can define a new role.
+
+###### As an `Admin`, I can delete a role if there is no resource exist with this role.
 
