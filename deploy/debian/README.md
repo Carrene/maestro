@@ -28,7 +28,7 @@ GRUB_CMDLINE_LINUX="ipv6.disable=1"
 After that you should update grub:
 
 ``` bash
-$ sudo update-grub
+sudo update-grub
 ```
 
 ##### IPv4 config
@@ -55,7 +55,7 @@ Generate RSA keys on deploy server then send public key to be added on repo.
 sudo su -
 cd ~/.ssh
 ssh-keygen -f dolphin-deploy_rsa
-# Leave passphrase empty by hittin return key
+# Leave passphrase empty by hittinig return key
 ```
 
 now send public key to admin using clipboard or an external file
