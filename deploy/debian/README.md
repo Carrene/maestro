@@ -1,6 +1,6 @@
 # Debian-based OS fresh install guide
 
-Here we are preparing fresh machine for use.
+Here we are preparing fresh machine for use.  
 At first update and upgrade machine:
 
 ``` bash
