@@ -83,4 +83,19 @@ git clone <dolphin-git-url>
 pip3.6 install -e .
 ```
 
+#### Generate deploy keys on server
 
+Generate RSA keys on deploy server then send public key to be added on repo.
+
+``` bash
+sudo su -
+cd ~/.ssh
+ssh-keygen -f dolphin-deploy_rsa
+# Leave passphrase empty by hittin return key
+```
+
+now send public key to admin using clipboard or an external file
+
+``` bash
+cat ~/.ssh/dolphin-deploy_rsa.pub 
+```
