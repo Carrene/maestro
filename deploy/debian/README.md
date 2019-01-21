@@ -207,7 +207,7 @@ def cross_origin_helper_app(environ, start_response):
 
 app = cross_origin_helper_app
 ```
-#### Generate deploy keys on server
+#### Generate deploy keys on server and clone project
 
 Generate RSA keys on deploy server then send public key to be added on repo.
 
@@ -222,4 +222,22 @@ now send public key to admin using clipboard or an external file
 
 ``` bash
 cat ~/.ssh/dolphin-deploy_rsa.pub 
+```
+
+After getting access with your public key, set ssh config at `~/.ssh/config`  
+and append the following lines to it
+
+```
+Host github-dolphin
+    User git
+    HostName github.com
+    IdentityFile /root/.ssh/dolphin-deploy_rsa
+```
+Note that the last line should matcg your key name   
+which was `dolphin-deploy_rsa` here.
+
+Then clone the project :
+
+``` bash
+git clone git@github-dolphin:Carrene/dolphin.git
 ```
