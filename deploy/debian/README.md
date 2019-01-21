@@ -65,35 +65,3 @@ git clone <dolphin-git-url>
 pip3.6 install -e .
 ```
 
-#### Clone project and install dolphin with pip
-
-Ensure the `python3.6` and `pip3.6` commands are available and working:
-
-```bash
-pip3.6 --version
-python3.6 --version
-```
-
-Then:
-
-``` bash
-mkdir /usr/local/maestro 
-cd /usr/local/maestro
-git clone <dolphin-git-url>
-pip3.6 install -e .
-```
-
-#### Cone project and install dolphin with pip
-
-Ensure the `python 3.6.*` and `pip3` for `python 3.6.*` is installed
-
-Then :
-
-``` bash
-sudo su -
-mkdir /usr/local/maestro 
-cd /usr/local/maestro
-git clone git@github-dolphin:Carrene/dolphin.git
-pip3 install -e .
-```
-
