@@ -4,10 +4,13 @@ Here we are preparing fresh machine for use.
 At first update and upgrade machine:
 
 ``` bash
-sudo apt update && sudo apt upgrade
+sudo su -
+apt update 
+apt upgrade
 ```
 
-#### IP Setings
+#### Network configuration
+
 At first, we are configuring IP settings.
 
 ##### IPv6 Disableing
@@ -25,10 +28,12 @@ GRUB_CMDLINE_LINUX_DEFAULT="ipv6.disable=1"
 GRUB_CMDLINE_LINUX="ipv6.disable=1"
 ```
 
-After that you should update grub:
+After that you should update grub and then reboot:
 
 ``` bash
-sudo update-grub
+update-grub
+reboot
+
 ```
 
 ##### IPv4 config
@@ -40,24 +45,31 @@ Un-comment the following line starting with `precedence` :
 # precedence ::ffff:0:0/96 100 
 ```
 
-#### Dependencies Setup
+#### Apt dependencies
 
 ``` bash
-sudo apt install libass-dev libpq-dev postgresql \
+apt install libass-dev libpq-dev postgresql \
     build-essential redis-server redis-tools
 ```
 
-#### Cone project and install dolphin with pip
+#### Clone project and install dolphin with pip
 
-Ensure the `python 3.6.*` and `pip3` for `python 3.6.*` is installed
+Ensure the `python3.6` and `pip3.6` commands are available and working.
 
-Then :
+```bash
+pip3.6 --version
+```
+
+```bash
+python3.6 --version
+```
+
+Then:
 
 ``` bash
-sudo su -
 mkdir /usr/local/maestro 
 cd /usr/local/maestro
 git clone git@github-dolphin:Carrene/dolphin.git
-pip3 install -e .
+pip3.6 install -e .
 ```
 
