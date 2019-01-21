@@ -65,41 +65,17 @@ git clone <dolphin-git-url>
 pip3.6 install -e .
 ```
 
-#### Generate deploy keys on server and clone project
+#### Cone project and install dolphin with pip
 
-Generate RSA keys on deploy server then send public key to be added on repo.
+Ensure the `python 3.6.*` and `pip3` for `python 3.6.*` is installed
+
+Then :
 
 ``` bash
 sudo su -
-cd ~/.ssh
-ssh-keygen -f dolphin-deploy_rsa
-# Leave passphrase empty by hittinig return key
-```
-
-now send public key to admin using clipboard or an external file
-
-``` bash
-cat ~/.ssh/dolphin-deploy_rsa.pub 
-```
-
-After getting access with your public key, set ssh config at `~/.ssh/config`  
-and append the following lines to it
-
-```
-Host github-dolphin
-    User git
-    HostName github.com
-    IdentityFile /root/.ssh/dolphin-deploy_rsa
-```
-Note that the last line should matcg your key name   
-which was `dolphin-deploy_rsa` here.
-
-Then clone the project :
-
-``` bash
+mkdir /usr/local/maestro 
+cd /usr/local/maestro
 git clone git@github-dolphin:Carrene/dolphin.git
+pip3 install -e .
 ```
-
-
-
 
