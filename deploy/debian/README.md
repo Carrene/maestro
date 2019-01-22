@@ -213,9 +213,6 @@ Ensure the `python3.6` and `pip3.6` commands are available and working.
 
 ```bash
 pip3.6 --version
-```
-
-```bash
 python3.6 --version
 ```
 
