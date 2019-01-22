@@ -38,7 +38,6 @@ Open the `/etc/gai.conf` on ubuntu server.
 Uncomment the following line starting with `precedence`:
 
 ```
-# For sites which prefer IPv4 connections change the last line to 
 # precedence ::ffff:0:0/96 100 
 ```
 
