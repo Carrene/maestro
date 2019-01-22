@@ -45,7 +45,6 @@ Uncomment the following line starting with `precedence`:
 ``` bash
 apt install libass-dev libpq-dev postgresql build-essential redis-server \
 redis-tools
-<<<<<<< HEAD
 ```
 
 #### Clone project and install dolphin with pip
@@ -64,8 +63,6 @@ mkdir /usr/local/maestro
 cd /usr/local/maestro
 git clone <dolphin-git-url>
 pip3.6 install -e .
-=======
->>>>>>> changes applied
 ```
 
 #### Clone project and install dolphin with pip
@@ -82,6 +79,6 @@ Then:
 ``` bash
 mkdir /usr/local/maestro 
 cd /usr/local/maestro
-git clone <git-url>
+git clone <dolphin-git-url>
 pip3.6 install -e .
 ```
