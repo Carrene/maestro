@@ -37,7 +37,7 @@ reboot
 Open the `/etc/gai.conf` on ubuntu server.  
 Uncomment the following line starting with `precedence`:
 
-``` python
+```
 # For sites which prefer IPv4 connections change the last line to 
 # precedence ::ffff:0:0/96 100 
 ```
@@ -63,6 +63,6 @@ Then:
 ``` bash
 mkdir /usr/local/maestro 
 cd /usr/local/maestro
-git clone <git-url>
+git clone <dolphin-git-url>
 pip3.6 install -e .
 ```
