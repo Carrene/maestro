@@ -45,7 +45,6 @@ Uncomment the following line starting with `precedence`:
 ``` bash
 apt install -y libass-dev libpq-dev postgresql build-essential redis-server \
 redis-tools
-<<<<<<< HEAD
 ```
 
 #### Clone panda and install with pip
@@ -65,8 +64,6 @@ cd /usr/local/maestro
 git clone <panda-git-url>
 cd panda
 pip3.6 install -e .
-=======
->>>>>>> changes applied
 ```
 
 #### Setup panda
@@ -224,6 +221,6 @@ Then:
 ``` bash
 mkdir /usr/local/maestro 
 cd /usr/local/maestro
-git clone <git-url>
+git clone <dolphin-git-url>
 pip3.6 install -e .
 ```
