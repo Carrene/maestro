@@ -26,7 +26,7 @@ To:
 GRUB_CMDLINE_LINUX_DEFAULT="ipv6.disable=1"
 ```
 
-After that you should update grub and then reboot:
+Now update grub and then reboot:
 
 ``` bash
 update-grub
@@ -34,8 +34,8 @@ reboot
 ```
 
 ##### IPv4 config
-Open the `/etc/gai.conf` on ubuntu server. 
-Un-comment the following line starting with `precedence` :
+Open the `/etc/gai.conf` on ubuntu server.  
+Uncomment the following line starting with `precedence`:
 
 ``` python
 # For sites which prefer IPv4 connections change the last line to 
@@ -45,13 +45,13 @@ Un-comment the following line starting with `precedence` :
 #### Apt dependencies
 
 ``` bash
-apt install libass-dev libpq-dev postgresql \
-    build-essential redis-server redis-tools
+apt install libass-dev libpq-dev postgresql build-essential redis-server \
+redis-tools
 ```
 
 #### Clone project and install dolphin with pip
 
-Ensure the `python3.6` and `pip3.6` commands are available and working.
+Ensure the `python3.6` and `pip3.6` commands are available and working:
 
 ```bash
 pip3.6 --version
@@ -66,4 +66,3 @@ cd /usr/local/maestro
 git clone <git-url>
 pip3.6 install -e .
 ```
-
