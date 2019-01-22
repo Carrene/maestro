@@ -82,7 +82,7 @@ Then:
 ``` bash
 mkdir /usr/local/maestro 
 cd /usr/local/maestro
-git clone git@github-dolphin:Carrene/dolphin.git
+git clone <git-url>
 pip3.6 install -e .
 ```
 
