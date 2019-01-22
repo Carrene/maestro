@@ -1,4 +1,4 @@
-# Debian-based OS fresh install guide
+# Fresh Debian based OS install guide
 
 Here we are preparing fresh machine for use.  
 At first update and upgrade machine:
@@ -10,11 +10,10 @@ apt upgrade
 
 #### Network configuration
 
-At first, we are configuring IP settings.
+At first, configure network.
 
 ##### IPv6 Disableing
-To do so open the `/etc/default/grub` using your favorite text editor with  
-root privileges and change/add:
+Open the `/etc/default/grub` and change/add:
 
 From:
 ```
@@ -26,7 +25,7 @@ To:
 GRUB_CMDLINE_LINUX_DEFAULT="ipv6.disable=1"
 ```
 
-Now update grub and then reboot:
+Now update grub and reboot:
 
 ``` bash
 update-grub
@@ -34,7 +33,7 @@ reboot
 ```
 
 ##### IPv4 config
-Open the `/etc/gai.conf` on ubuntu server.  
+Open the `/etc/gai.conf`.  
 Uncomment the following line starting with `precedence`:
 
 ```
