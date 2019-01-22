@@ -45,6 +45,7 @@ Uncomment the following line starting with `precedence`:
 ``` bash
 apt install libass-dev libpq-dev postgresql build-essential redis-server \
 redis-tools
+<<<<<<< HEAD
 ```
 
 #### Clone project and install dolphin with pip
@@ -63,11 +64,13 @@ mkdir /usr/local/maestro
 cd /usr/local/maestro
 git clone <dolphin-git-url>
 pip3.6 install -e .
+=======
+>>>>>>> changes applied
 ```
 
 #### Clone project and install dolphin with pip
 
-Ensure the `python3.6` and `pip3.6` commands are available and working.
+Ensure the `python3.6` and `pip3.6` commands are available and working:
 
 ```bash
 pip3.6 --version
@@ -82,4 +85,3 @@ cd /usr/local/maestro
 git clone <git-url>
 pip3.6 install -e .
 ```
-
