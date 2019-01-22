@@ -4,7 +4,6 @@ Here we are preparing fresh machine for use.
 At first update and upgrade machine:
 
 ``` bash
-sudo su -
 apt update 
 apt upgrade
 ```
@@ -14,18 +13,17 @@ apt upgrade
 At first, we are configuring IP settings.
 
 ##### IPv6 Disableing
-To do so open the `/etc/default/grub` using your favorite text editor with root privileges and change/add:
+To do so open the `/etc/default/grub` using your favorite text editor with 
+root privileges and change/add:
 
 From:
 ```
 GRUB_CMDLINE_LINUX_DEFAULT=""
-GRUB_CMDLINE_LINUX=""
 ```
 
 To:
 ```
 GRUB_CMDLINE_LINUX_DEFAULT="ipv6.disable=1"
-GRUB_CMDLINE_LINUX="ipv6.disable=1"
 ```
 
 After that you should update grub and then reboot:
@@ -33,7 +31,6 @@ After that you should update grub and then reboot:
 ``` bash
 update-grub
 reboot
-
 ```
 
 ##### IPv4 config
@@ -69,7 +66,7 @@ Then:
 ``` bash
 mkdir /usr/local/maestro 
 cd /usr/local/maestro
-git clone git@github-dolphin:Carrene/dolphin.git
+git clone <git-url>
 pip3.6 install -e .
 ```
 
