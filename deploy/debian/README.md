@@ -13,7 +13,7 @@ apt upgrade
 At first, we are configuring IP settings.
 
 ##### IPv6 Disableing
-To do so open the `/etc/default/grub` using your favorite text editor with 
+To do so open the `/etc/default/grub` using your favorite text editor with  
 root privileges and change/add:
 
 From:
