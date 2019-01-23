@@ -147,7 +147,7 @@ jwt:
     secure: false
 ```
 
-And fill `pandawsgi.py` with:
+and `pandawsgi.py` with:
 
 ``` python
 import os
@@ -208,5 +208,3 @@ def cross_origin_helper_app(environ, start_response):
 
 app = cross_origin_helper_app
 ```
-
-
