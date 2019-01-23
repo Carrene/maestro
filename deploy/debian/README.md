@@ -71,6 +71,7 @@ pip3.6 install -e .
 Create required directory and files:
 
 ``` bash
+mkdir -p /etc/maestro/panda
 touch /etc/maestro/panda.yml
 touch /etc/maestro/pandawsgi.py
 ```
