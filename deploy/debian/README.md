@@ -61,8 +61,8 @@ Then:
 ``` bash
 mkdir -p /usr/local/maestro 
 cd /usr/local/maestro
-git clone <dolphin-git-url>
-cd dolphin
+git clone <panda-git-url>
+cd panda
 pip3.6 install -e .
 ```
 
