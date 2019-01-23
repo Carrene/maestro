@@ -47,7 +47,7 @@ apt install -y libass-dev libpq-dev postgresql build-essential redis-server \
 redis-tools
 ```
 
-#### Clone project and install dolphin with pip
+#### Clone panda and install with pip
 
 Ensure the `python3.6` and `pip3.6` commands are available and working:
 
@@ -71,12 +71,11 @@ pip3.6 install -e .
 Create required directory and files:
 
 ``` bash
-mkdir -p /etc/maestro/panda
 touch /etc/maestro/panda.yml
 touch /etc/maestro/pandawsgi.py
 ```
 
-Fill `panda.yml` with:
+Fill `/etc/maestro/panda.yml` with:
 
 ``` yaml
 db:
@@ -147,7 +146,7 @@ jwt:
     secure: false
 ```
 
-and `pandawsgi.py` with:
+and `/etc/maestro/pandawsgi.py` with:
 
 ``` python
 import os
