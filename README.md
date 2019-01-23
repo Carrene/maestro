@@ -148,7 +148,7 @@ monitoring environment.
 
 #### Group
 
-###### As an `Admin` I can create a group with unique title.
+###### As an `Member` I can create a group with unique title.
 
 ###### As an `Admin` I can place one or more projects into the group.
 
