@@ -43,7 +43,7 @@ Uncomment the following line starting with `precedence`:
 #### Apt dependencies
 
 ``` bash
-apt install libass-dev libpq-dev postgresql build-essential redis-server \
+apt install -y libass-dev libpq-dev postgresql build-essential redis-server \
 redis-tools
 ```
 
@@ -59,8 +59,19 @@ python3.6 --version
 Then:
 
 ``` bash
-mkdir /usr/local/maestro 
+mkdir -p /usr/local/maestro 
 cd /usr/local/maestro
 git clone <dolphin-git-url>
+cd dolphin
 pip3.6 install -e .
+```
+
+#### Setup panda
+
+Create required directory and files:
+
+``` bash
+mkdir -p /etc/maestro/panda
+touch /etc/maestro/panda.yml
+touch /etc/maestro/pandawsgi.py
 ```
