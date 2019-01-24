@@ -236,7 +236,9 @@ monitoring environment.
 
 ###### As a `Member`, I can `REMOVE` a tag from a draft issue.
 
-###### As a `Member`, I can `REMOVE` a tag from an issue..
+###### As a `Member`, I can `REMOVE` a tag from an issue.
+
+###### As a `Member`, I can `CREATE` a tag with a unique title.
 
 #### Resource
 ###### As a `member`, I can `LIST` resources of a phase.
