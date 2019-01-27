@@ -207,3 +207,38 @@ def cross_origin_helper_app(environ, start_response):
 
 app = cross_origin_helper_app
 ```
+
+Create panda service in `/etc/systemd/system/panda.service` and fill with:
+
+```
+[Unit]
+Description=CAS Back-end REST API (nightly)
+After=network.target
+[Service]
+PIDFile=/run/maestro/panda.pid
+User=maestro
+Group=maestro
+ExecStart=/usr/local/bin/gunicorn \
+	--bind unix:/run/maestro/panda.socket \
+	--pid /run/maestro/panda.pid \
+	--chdir /etc/maestro \
+	pandawsgi:app
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s TERM $MAINPID
+PrivateTmp=true
+[Install]
+WantedBy=multi-user.target
+```
+
+Then prepare system and run service:
+
+``` bash
+groupadd --system maestro
+useradd --system -g maestro maestro
+echo "d /run/maestro 0755 maestro maestro -" > /usr/lib/tmpfiles.d/maestro.conf
+systemd-tmpfiles --create
+systemctl daemon-reload
+systemctl enable panda.service
+systemctl start panda.service
+```
+
