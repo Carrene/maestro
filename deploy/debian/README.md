@@ -263,7 +263,11 @@ upstream panda_api {
     server unix:/run/maestro/panda.socket fail_timeout=1; 
 }
 server {
+<<<<<<< HEAD
     listen 8081 default;
+=======
+    listen 88 default;
+>>>>>>> Added nginx config for panda
     root /var/www/html;
     index index.html;
     location /apiv1/ {
@@ -283,3 +287,4 @@ Then make site enabled and restart nginx service:
 ln -s /etc/nginx/sites-available/panda.conf /etc/nginx/sites-enabled/panda.conf
 service nginx restart
 ```
+
