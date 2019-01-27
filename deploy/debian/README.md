@@ -242,3 +242,45 @@ systemctl enable panda.service
 systemctl start panda.service
 ```
 
+#### Configuring nginx
+
+``` bash
+apt install nginx
+```
+
+Configure nginx to refuse IPv6:, edit `/etc/nginx/sites-available/default`  
+Comment line contains `listen [::]:80 default_server` with `#` like this:  
+
+``` 
+# listen [::]:80 default_server
+```
+
+Create nginx config file at `/etc/nginx/sites-available/panda.conf` and fill  
+with:
+
+```
+upstream panda_api {
+    server unix:/run/maestro/panda.socket fail_timeout=1; 
+}
+server {
+    listen 88 default;
+    root /var/www/html;
+    index index.html;
+    location /apiv1/ {
+      proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+      proxy_redirect off;
+      proxy_pass http://panda_api;
+    }
+    location / {
+        try_files \$uri \$uri/ =404;
+    }
+}
+```
+
+Then make site enabled and restart nginx service:
+
+``` bash
+ln -s /etc/nginx/sites-available/panda.conf /etc/nginx/sites-enabled/panda.conf
+systemctl restart nginx
+```
+
