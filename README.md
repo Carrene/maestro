@@ -309,8 +309,8 @@ monitoring environment.
 
 #### integrations with github
 
-###### As an `Admin`, I can select one or more repositor(y|ies) to transfer a nugget to github as a milstone.
+###### As an `Admin`, I can select one or more repositor(y|ies) to transfer a Nugget to github as a milstone.
 
-###### As an `Admin`, I can assign nugget to a resource in specifict phase so we have a item asymmetric issue will be created for repository in github that track it.
+###### As an `Admin`, I can assign Nugget to a resource in specifict phase so we have a item asymmetric issue will be created for repository in github that track it.
 
-###### As a `member`, I can aware of new comment in issue of github in chatroom of nugget.
+###### As a `member`, I can aware of new comment in issue of github in chatroom of Nugget.
