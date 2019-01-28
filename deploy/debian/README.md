@@ -263,7 +263,7 @@ upstream panda_api {
     server unix:/run/maestro/panda.socket fail_timeout=1; 
 }
 server {
-    listen 88 default;
+    listen 8081 default;
     root /var/www/html;
     index index.html;
     location /apiv1/ {
