@@ -239,7 +239,7 @@ echo "d /run/maestro 0755 maestro maestro -" > /usr/lib/tmpfiles.d/maestro.conf
 systemd-tmpfiles --create
 systemctl daemon-reload
 systemctl enable panda.service
-systemctl start panda.service
+service panda start
 ```
 
 #### Configuring nginx
@@ -281,6 +281,5 @@ Then make site enabled and restart nginx service:
 
 ``` bash
 ln -s /etc/nginx/sites-available/panda.conf /etc/nginx/sites-enabled/panda.conf
-systemctl restart nginx
+service nginx restart
 ```
-
