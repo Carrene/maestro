@@ -283,4 +283,3 @@ Then make site enabled and restart nginx service:
 ln -s /etc/nginx/sites-available/panda.conf /etc/nginx/sites-enabled/panda.conf
 service nginx restart
 ```
-
