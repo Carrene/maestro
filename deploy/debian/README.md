@@ -44,7 +44,7 @@ Uncomment the following line starting with `precedence`:
 
 ``` bash
 apt install -y libass-dev libpq-dev postgresql build-essential redis-server \
-redis-tools
+redis-tools nginx
 ```
 
 #### Clone panda and install with pip
@@ -146,7 +146,7 @@ jwt:
     secure: false
 ```
 
-and `/etc/maestro/pandawsgi.py` with:
+And `/etc/maestro/pandawsgi.py` with:
 
 ``` python
 import os
@@ -243,10 +243,6 @@ service panda start
 ```
 
 #### Configuring nginx, postgresql and redis:
-
-``` bash
-apt install nginx
-```
 
 Configure nginx to refuse IPv6. Edit `/etc/nginx/sites-available/default`  
 Comment line contains `listen [::]:80 default_server` with `#` like this:  
@@ -349,7 +345,8 @@ And response should be:
 Then:
 
 ``` bash
-curl -X CREATE -F "email=god@example.com" -F "password=123456" localhost:8081/apiv1/tokens
+curl -X CREATE localhost:8081/apiv1/tokens -F "email=god@example.com" \
+-F "password=123456"
 ```
 
 And response should be:
@@ -364,7 +361,8 @@ Then:
 
 ``` bash
 curl -X CREATE \
-"localhost:8081/apiv1/authorizationcodes?applicationId=1&scopes=title&state=123456&redirectUri=http://example2.com/oauth2" \
+"localhost:8081/apiv1/authorizationcodes?applicationId=1&scopes=title&\
+state=123456&redirectUri=http://example2.com/oauth2" \
 -H "authorization:$TOKEN " 
 ```
 
@@ -373,6 +371,25 @@ And response should be:
 ```
 {
     "authorizationCode":"eyJhbGciOiJIUzI1NiIsImlhdCI6MTU0ODY4NTg2MiwiZXhwIjoxNTQ4NzcyMjYyfQ.eyJzY29wZXMiOlsidGl0bGUiXSwibWVtYmVySWQiOjEsIm1lbWJlclRpdGxlIjpudWxsLCJlbWFpbCI6ImdvZEBleGFtcGxlLmNvbSIsImFwcGxpY2F0aW9uSWQiOjEsImFwcGxpY2F0aW9uVGl0bGUiOiJvYXV0aCIsImxvY2F0aW9uIjoiaHR0cDovL2V4YW1wbGUyLmNvbS9vYXV0aDI_YXBwbGljYXRpb25faWQ9MSZzdGF0ZT0xMjM0NTYifQ.uk6lPKGMjVIGYEzEDGGtQhqF6zyBmujShWlr-GiigeI"
+}
+```
+
+Then:
+
+``` bash
+curl -X GET "localhost:8081/apiv1/applications/1" -H "authorization: $TOKEN"
+```
+
+And response should be:
+
+```
+{
+    "id":1,
+    "title":"oauth",
+    "redirectUri":"http:\/\/example.com\/oauth",
+    "ownerId":1,
+    "secret":"A1dFVpz4w\/qyym+HeXKWYmm6Ocj4X5ZNv1JQ7kgHBEk=\n",
+    "icon":null
 }
 ```
 
@@ -396,7 +413,8 @@ And response should be:
 Then:
 
 ``` bash
-curl -X GET "localhost:8081/apiv1/members/me" -H "authorization: oauth2-accesstoken $ACCESS_TOKEN"
+curl -X GET "localhost:8081/apiv1/members/me" \
+-H "authorization: oauth2-accesstoken $ACCESS_TOKEN"
 ```
 
 And response should be:
