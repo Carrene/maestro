@@ -281,6 +281,10 @@ monitoring environment.
 
 ###### As a `member`, I can CREATE a Time Card for a nugget that I assigned to.
 
+###### As a `member`, I can UPDATE a Time Card of a nugget that I assigned to.
+
+###### As a `member`, I can LIST Time Cards of a nugget.
+
 
 ## Phase 2
 
