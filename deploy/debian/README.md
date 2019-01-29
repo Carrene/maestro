@@ -248,7 +248,7 @@ service panda start
 apt install nginx
 ```
 
-Configure nginx to refuse IPv6:, edit `/etc/nginx/sites-available/default`  
+Configure nginx to refuse IPv6. Edit `/etc/nginx/sites-available/default`  
 Comment line contains `listen [::]:80 default_server` with `#` like this:  
 
 ``` 
@@ -290,13 +290,13 @@ To prepare redis, edit ` /etc/redis/redis.conf` and change:
 bind 127.0.0.1 ::1
 ```
 
-To
+To:
 
 ```
 bind 127.0.0.1
 ```
 
-Then  
+Then:  
 
 ``` bash
 service redis-server start
