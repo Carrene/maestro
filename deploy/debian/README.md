@@ -4,8 +4,16 @@ Here we are preparing fresh machine for use.
 At first update and upgrade machine:
 
 ``` bash
-apt update 
+apt update
+apt dist-upgrade
 apt upgrade
+```
+
+Uncomment these lines to enable some source in `/etc/apt/sources.list`:
+
+```
+deb-src http://archive.ubuntu.com/ubuntu bionic main restricted
+deb-src http://archive.ubuntu.com/ubuntu bionic-updates main restricted
 ```
 
 #### Network configuration
