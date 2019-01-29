@@ -242,7 +242,7 @@ systemctl enable panda.service
 service panda start
 ```
 
-#### Configuring nginx
+#### Configuring nginx, postgresql and redis:
 
 ``` bash
 apt install nginx
@@ -283,3 +283,132 @@ Then make site enabled and restart nginx service:
 ln -s /etc/nginx/sites-available/panda.conf /etc/nginx/sites-enabled/panda.conf
 service nginx restart
 ```
+
+To prepare redis, edit ` /etc/redis/redis.conf` and change:  
+
+```
+bind 127.0.0.1 ::1
+```
+
+To
+
+```
+bind 127.0.0.1
+```
+
+Then  
+
+``` bash
+service redis-server start
+systemctl enable redis-server 
+```
+
+Prepare postgresql:
+
+``` bash
+echo "listen_addresses = ''" >> /etc/postgresql/10/main/postgresql.conf
+echo "CREATE USER maestro" | sudo -u postgres psql
+echo "CREATE DATABASE panda OWNER maestro" | sudo -u postgres psql
+service postgresql restart
+sudo -u maestro panda --config-file /etc/maestro/panda.yml db schema
+sudo -u maestro panda --config-file /etc/maestro/panda.yml db basedata
+```
+
+And response should be:
+
+```
+Admin has been created.
+  Title: GOD
+  Email: god@example.com
+  Password: 123456
+  Role: admin
+
+Application has been created.
+  Title: oauth
+  Secret: A1dFVpz4w/qyym+HeXKWYmm6Ocj4X5ZNv1JQ7kgHBEk=
+  Redirect uri: http://example.com/oauth
+  Owner of application is admin
+````
+
+#### Test panda status
+
+Follow these steps to test:
+
+``` bash
+curl localhost:8081/apiv1/version
+```
+
+And response should be:
+
+```
+{
+    "version":"0.5.1a3"
+}
+```
+
+Then:
+
+``` bash
+curl -X CREATE -F "email=god@example.com" -F "password=123456" localhost:8081/apiv1/tokens
+```
+
+And response should be:
+
+```
+{
+    "token":"eyJhbGciOiJIUzI1NiIsImlhdCI6MTU0ODc0MTE5NCwiZXhwIjoxNTQ4ODI3NTk0fQ.eyJpZCI6MSwicmVmZXJlbmNlSWQiOjEsImVtYWlsIjoiZ29kQGV4YW1wbGUuY29tIiwibmFtZSI6bnVsbCwidGl0bGUiOiJHT0QiLCJhdmF0YXIiOm51bGwsInJvbGVzIjpbImFkbWluIl0sInNlc3Npb25JZCI6ImYyY2NmNDhmLTM0ZGUtNDVhYy04N2ViLTY5OTM2YmYzNjY5MSJ9.b24528FcPnVsdYd9BP1hZNobI-im5HqQXbwQNZBgbVo"
+}
+```
+
+Then: 
+
+``` bash
+curl -X CREATE \
+"localhost:8081/apiv1/authorizationcodes?applicationId=1&scopes=title&state=123456&redirectUri=http://example2.com/oauth2" \
+-H "authorization:$TOKEN " 
+```
+
+And response should be:
+
+```
+{
+    "authorizationCode":"eyJhbGciOiJIUzI1NiIsImlhdCI6MTU0ODY4NTg2MiwiZXhwIjoxNTQ4NzcyMjYyfQ.eyJzY29wZXMiOlsidGl0bGUiXSwibWVtYmVySWQiOjEsIm1lbWJlclRpdGxlIjpudWxsLCJlbWFpbCI6ImdvZEBleGFtcGxlLmNvbSIsImFwcGxpY2F0aW9uSWQiOjEsImFwcGxpY2F0aW9uVGl0bGUiOiJvYXV0aCIsImxvY2F0aW9uIjoiaHR0cDovL2V4YW1wbGUyLmNvbS9vYXV0aDI_YXBwbGljYXRpb25faWQ9MSZzdGF0ZT0xMjM0NTYifQ.uk6lPKGMjVIGYEzEDGGtQhqF6zyBmujShWlr-GiigeI"
+}
+```
+
+Then:
+
+``` bash
+curl -X CREATE "localhost:8081/apiv1/accesstokens" -F "applicationId=1" \
+-F "code=$AUTHORIZATION_CODE"
+-F "secret=A1dFVpz4w/qyym+HeXKWYmm6Ocj4X5ZNv1JQ7kgHBEk="
+```
+
+And response should be:
+
+```
+{
+    "accessToken":"eyJhbGciOiJIUzI1NiIsImlhdCI6MTU0ODY4NTYyNCwiZXhwIjoxNTUxMjc3NjI0fQ.eyJhcHBsaWNhdGlvbklkIjoxLCJtZW1iZXJJZCI6MSwic2NvcGVzIjpbInRpdGxlIl19.AHR7pfbkXSmyi9MFTEjMMqhvgZ1rXImpQaqSEnonFbk",
+    "memberId":1
+}
+```
+
+Then:
+
+``` bash
+curl -X GET "localhost:8081/apiv1/members/me" -H "authorization: oauth2-accesstoken $ACCESS_TOKEN"
+```
+
+And response should be:
+
+```
+{
+    "title":"GOD",
+    "email":null,
+    "name":null,
+    "avatar":null,
+    "phone":null,
+    "id":1
+}
+```
+
