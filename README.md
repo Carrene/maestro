@@ -277,6 +277,11 @@ monitoring environment.
 
 ###### As a `member`, I can `GET` one of my organizations.
 
+#### Time Card
+
+###### As a `member`, I can CREATE a Time Card for a nugget that I assigned to.
+
+
 ## Phase 2
 
 ##### Settings/Setup (Groups/Phases/Workflows/Users)
@@ -306,4 +311,3 @@ monitoring environment.
 ###### As an `Admin`, I can define a new role.
 
 ###### As an `Admin`, I can delete a role if there is no resource exist with this role.
-
