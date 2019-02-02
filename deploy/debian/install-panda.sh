@@ -8,13 +8,13 @@ service nginx restart
 cd /usr/local/maestro
 git clone git@github.com:Carrene/panda.git
 if [ $? != 0 ] ; then 
-  echo "Can not clone panda. check this problem"
+  echo "Can not clone panda. Check this problem"
   exit 1
 fi
 cd panda
 pip3.6 install -e .
 
-# Create required directory and files:
+# Create required directories and files:
 echo "
 db:
   url: postgresql://maestro:@/panda
