@@ -1,6 +1,6 @@
-# Maestro deploymenty instruction on ubuntu
+# Maestro deployment instruction on ubuntu
 
-**_Note:**_ all commands in this file should be issued by the `root` user.  
+_**Note:**_ All commands in this file should be executed by the `root` user.  
 Here we are preparing fresh machine for use.
 
 ### Before running the scripts
@@ -76,7 +76,6 @@ bind 127.0.0.1 ::1
 ```
 
 To:
-
 ```
 bind 127.0.0.1
 ```
@@ -84,9 +83,13 @@ bind 127.0.0.1
 Then continue to install panda:
 
 ``` bash
-./install-panda.sha
+./install-panda.sh
+```
+
+Now, verify success installation:
+
+``` bash
 ./test-panda.sh
 ```
 
-If you get `--- DONE ---`, go on with next steps.
-
+Now, if you get `--- DONE ---`, go on with next steps.
