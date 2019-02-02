@@ -1,18 +1,40 @@
-# Fresh Debian based OS install guide
+# Maestro deployment instruction on ubuntu
 
-Here we are preparing fresh machine for use.  
-At first update and upgrade machine:
+_**Note:**_ All commands in this file should be executed by the `root` user.  
+Here we are preparing fresh machine for use.
+
+### Before running the scripts
+
+Uncomment these lines to enable some source in `/etc/apt/sources.list`:
+
+```
+deb-src http://archive.ubuntu.com/ubuntu bionic main restricted
+deb-src http://archive.ubuntu.com/ubuntu bionic-updates main restricted
+```
+
+And then:
 
 ``` bash
-apt update 
+apt update
+apt dist-update
 apt upgrade
 ```
 
-#### Network configuration
+### Network configuration
 
-At first, configure network.
+Then, configure network.
 
-##### IPv6 Disableing
+#### IPv4 config
+
+Open the `/etc/gai.conf`.  
+Uncomment the following line starting with `precedence`:
+
+```
+# precedence ::ffff:0:0/96 100 
+```
+
+#### IPv6 Disableing
+
 Open the `/etc/default/grub` and change/add:
 
 From:
@@ -32,254 +54,42 @@ update-grub
 reboot
 ```
 
-##### IPv4 config
-Open the `/etc/gai.conf`.  
-Uncomment the following line starting with `precedence`:
-
-```
-# precedence ::ffff:0:0/96 100 
-```
-
-#### Apt dependencies
+### Panda
 
 ``` bash
-apt install -y libass-dev libpq-dev postgresql build-essential redis-server \
-redis-tools
+./pre-install.sh
 ```
 
-#### Clone panda and install with pip
+#### Configuring nginx and redis to refuse IPv6
 
-Ensure the `python3.6` and `pip3.6` commands are available and working:
-
-```bash
-pip3.6 --version
-python3.6 --version
-```
-
-Then:
-
-``` bash
-mkdir -p /usr/local/maestro 
-cd /usr/local/maestro
-git clone <panda-git-url>
-cd panda
-pip3.6 install -e .
-```
-
-#### Setup panda
-
-Create required directory and files:
-
-``` bash
-touch /etc/maestro/panda.yml
-touch /etc/maestro/pandawsgi.py
-```
-
-Fill `/etc/maestro/panda.yml` with:
-
-``` yaml
-db:
-  url: postgresql://maestro:@/panda
-
-reset_password:
-  secret: !!binary xxSN/uarj5SpcEphAHhmsab8Ql2Og/2IcieNfQ3PysI=
-  max_age: 3600  # seconds
-  algorithm: HS256
-  callback_url: http://nightly.cas.carrene.com/reset_password
-
-registeration:
-  secret: !!binary xxSN/uarj5SpcEphAHhmsab8Ql2Og/2IcieNfQ3PysI=
-  max_age: 86400  # seconds
-  algorithm: HS256
-  callback_url: http://nightly.cas.carrene.com/signup
-
-messaging:
-  default_messenger: restfulpy.messaging.SmtpProvider
-  template_dirs:
-    - %(root_path)s/panda/email_templates
-
-smtp:
-  host: smtp.gmail.com
-  port: 587
-  username: cas@carrene.com
-  password: V3NxJF4abPNUvkAV
-  local_hostname: carrene.com
-
-sms:
-  provider: panda.sms.AutomaticSmsProvider
-  cm:
-    sender: cas@Carrene
-    refrence: Carrene
-    token: D3774402-61F0-4929-ABCA-956B8B4C88EF
-    url: https://gw.cmtelecom.com/v1.0/message
-  kavenegar:
-    apiKey: 4C59796C3441774D32637879544F2F5356313235667569366E7330302F32374E
-
-phone:
-  activation_code:
-    length: 6
-    hash_algorithm: SHA-1
-    time_interval: 59 # seconds
-    challenge_limit: 40
-    seed: !!python/bytes nrZh/4o5+FsQgws1+Gj1aqp23aGetmH/ijn5iwar4OE=
-    window: 4
-  jwt:
-    max_age: 86400
-
-worker:
-  gap: 10
-
-logging:
-  loggers:
-    default:
-      propagate: false
-
-    taskqueue:
-      propagate: false
-
-storage:
-  local_directory: /var/www/assets/panda
-  base_url: http://nightly.cas.carrene.com/assets
-
-jwt:
-  refresh_token:
-    secure: false
-```
-
-and `/etc/maestro/pandawsgi.py` with:
-
-``` python
-import os
-from panda import panda
-
-
-panda.configure(files='/etc/maestro/panda.yml')
-panda.initialize_orm()
-
-
-verbs = [
-    'GET',
-    'CREATE',
-    'DEFINE',
-    'LIST',
-    'LOGOUT',
-    'METADATA',
-    'REVOKE',
-    'UPDATE',
-    'CHECK',
-    'CLAIM',
-    'REGISTER',
-    'INVITE',
-    'JOIN',
-    'CHANGE',
-    'RESET',
-    'BIND',
-    'ASK',
-    'INVALIDATE'
-]
-
-
-http_headers = [
-    'X-Pagination-Count',
-    'X-Pagination-Take',
-    'X-Pagination-Skip',
-    'X-Identity',
-    'X-New-JWT-Token',
-]
-
-
-def cross_origin_helper_app(environ, start_response):
-
-    def better_start_response(status, headers, *args, **kw):
-        headers.append(('Access-Control-Allow-Origin', 'http://nightly.maestro.carrene.com'))
-        headers.append(('Access-Control-Allow-Headers', 'Content-Type, Authorization'))
-        headers.append(('Access-Control-Allow-Credentials', 'true'))
-        headers.append(('Access-Control-Allow-Methods', ', '.join(verbs)))
-        headers.append(('Access-Control-Expose-Headers', ', '.join(http_headers)))
-        start_response(status, headers, *args, **kw)
-
-    if environ['REQUEST_METHOD'] == 'OPTIONS':
-        better_start_response('200 Ok', [])
-        return []
-
-    return panda(environ, better_start_response)
-
-
-app = cross_origin_helper_app
-```
-
-Create panda service in `/etc/systemd/system/panda.service` and fill with:
+To prepare nginx, edit `/etc/nginx/sites-available/default`.  
+Comment line contains `listen [::]:80 default_server` with `#` like this:
 
 ```
-[Unit]
-Description=CAS Back-end REST API (nightly)
-After=network.target
-[Service]
-PIDFile=/run/maestro/panda.pid
-User=maestro
-Group=maestro
-ExecStart=/usr/local/bin/gunicorn \
-	--bind unix:/run/maestro/panda.socket \
-	--pid /run/maestro/panda.pid \
-	--chdir /etc/maestro \
-	pandawsgi:app
-ExecReload=/bin/kill -s HUP $MAINPID
-ExecStop=/bin/kill -s TERM $MAINPID
-PrivateTmp=true
-[Install]
-WantedBy=multi-user.target
-```
-
-Then prepare system and run service:
-
-``` bash
-groupadd --system maestro
-useradd --system -g maestro maestro
-echo "d /run/maestro 0755 maestro maestro -" > /usr/lib/tmpfiles.d/maestro.conf
-systemd-tmpfiles --create
-systemctl daemon-reload
-systemctl enable panda.service
-service panda start
-```
-
-#### Configuring nginx
-
-``` bash
-apt install nginx
-```
-
-Configure nginx to refuse IPv6:, edit `/etc/nginx/sites-available/default`  
-Comment line contains `listen [::]:80 default_server` with `#` like this:  
-
-``` 
 # listen [::]:80 default_server
 ```
 
-Create nginx config file at `/etc/nginx/sites-available/panda.conf` and fill  
-with:
+To prepare redis, edit ` /etc/redis/redis.conf` and change from:
 
 ```
-upstream panda_api {
-    server unix:/run/maestro/panda.socket fail_timeout=1; 
-}
-server {
-    listen 8081 default;
-    root /var/www/html;
-    index index.html;
-    location /apiv1/ {
-      proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
-      proxy_redirect off;
-      proxy_pass http://panda_api;
-    }
-    location / {
-        try_files \$uri \$uri/ =404;
-    }
-}
+bind 127.0.0.1 ::1
 ```
 
-Then make site enabled and restart nginx service:
+To:
+```
+bind 127.0.0.1
+```
+
+Then continue to install panda:
 
 ``` bash
-ln -s /etc/nginx/sites-available/panda.conf /etc/nginx/sites-enabled/panda.conf
-service nginx restart
+./install-panda.sh
 ```
+
+Now, verify success installation:
+
+``` bash
+./test-panda.sh
+```
+
+Now, if you get `--- DONE ---`, go on with next steps.
