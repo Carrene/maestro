@@ -225,6 +225,9 @@ monitoring environment.
 
 ###### As a `Member`, I can subscribe multiple issues.
 
+###### As a `Member` I can delete an attachment from an issue.
+
+
 #### Draft Issue
 
 ###### As a `Member`, I can `DEFINE` a draft issue.
