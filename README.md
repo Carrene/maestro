@@ -127,6 +127,8 @@ monitoring environment.
 
 ###### As a `Member` I can attach a file to the `Project`.
 
+###### As a `Member` I can delete an attachment from a `Project'.
+
 
 #### Release
 
