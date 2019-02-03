@@ -221,6 +221,8 @@ monitoring environment.
 
 ###### AS a `Member`, I can unsee an issue that I subscribed.
 
+###### As a `Member`, I can subscribe multiple issues.
+
 #### Draft Issue
 
 ###### As a `Member`, I can `DEFINE` a draft issue.
