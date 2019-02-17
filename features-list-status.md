@@ -31,7 +31,7 @@ focus.
 - [x] Sorted by "Created At" column "oldest to newest" on page load.  
 - [x] Click on a list item, fills right side panel and chat section.  
 - [x] Right side panel stays on the selected tab when changing project or nugget.
-- [ ] Right side panel loads new data when changing list item.  (anywhere except nuggets worked !!)
+- [ ] Right side panel loads new data when changing list item.  (not worked for nuggets !!)
 - [x] Audit logs tab is enabled only in existing nuggets.  
 - [x] Red notification indicator on logs icon meaning subscribed nuggets modified.  
 - [x] Audit logs sorted from the oldest change to the newest.
