@@ -10,6 +10,12 @@ The table containing projects related to Maestro:
 
 | Dolphin        | Panda         | Jaguar        | Flamingo       | Crane          |
 | -------------- | ------------- | ------------- | -------------- | -------------- |
+| v0.20.3a1      | v0.6.0a3      | v0.10.1a3     | v0.20.6-a7     | v0.3.3-a1      |
+| v0.20.3a1      | v0.6.0a3      | v0.10.0a3     | v0.20.2-a3     | v0.3.3-a1      |
+| v0.20.2a1      | v0.6.0a3      | v0.9.4a3      | v0.19.1-a2     | v0.3.3-a1      |
+| v0.19.3a1      | v0.6.0a3      | v0.9.1a3      | v0.18.1-a2     | v0.3.3-a1      |
+| v0.18.3a1      | v0.6.0a3      | v0.8.2a3      | v0.15.2-a3     | v0.3.3-a1      |
+| v0.18.0a1      | v0.6.0a3      | v0.8.0a3      | v0.14.2-a3     | v0.3.3-a1      |
 | v0.17.1a1      | v0.5.1a3      | v0.7.0a3      | v0.13.4-a5     | v0.3.3-a1      |
 | v0.17.1a1      | v0.5.1a3      | v0.7.0a3      | v0.12.6-a6     | v0.3.2-nightly |
 | v0.17.0a1      | v0.5.1a3      | v0.7.0a3      | v0.12.6-a6     | v0.3.2-nightly |
@@ -125,6 +131,8 @@ monitoring environment.
 
 ###### As a `Member` I can attach a file to the `Project`.
 
+###### As a `Member` I can delete an attachment from a `Project'.
+
 
 #### Release
 
@@ -219,6 +227,11 @@ monitoring environment.
 
 ###### AS a `Member`, I can unsee an issue that I subscribed.
 
+###### As a `Member`, I can subscribe multiple issues.
+
+###### As a `Member` I can delete an attachment from an issue.
+
+
 #### Draft Issue
 
 ###### As a `Member`, I can `DEFINE` a draft issue.
@@ -277,6 +290,15 @@ monitoring environment.
 
 ###### As a `member`, I can `GET` one of my organizations.
 
+#### Time Card
+
+###### As a `member`, I can CREATE a Time Card for a nugget that I assigned to.
+
+###### As a `member`, I can UPDATE a Time Card of a nugget that I assigned to.
+
+###### As a `member`, I can LIST Time Cards of a nugget.
+
+
 ## Phase 2
 
 ##### Settings/Setup (Groups/Phases/Workflows/Users)
@@ -314,3 +336,5 @@ monitoring environment.
 ###### As an `Admin`, I can assign Nugget to a resource in specifict phase so we have a item asymmetric issue will be created for repository in github that track it.
 
 ###### As a `member`, I can aware of new comment in issue of github in chatroom of Nugget.
+
+
