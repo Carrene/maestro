@@ -328,3 +328,13 @@ monitoring environment.
 ###### As an `Admin`, I can define a new role.
 
 ###### As an `Admin`, I can delete a role if there is no resource exist with this role.
+
+#### integrations with github
+
+###### As an `Admin`, I can select one or more repositor(y|ies) to transfer a Nugget to github as a milstone.
+
+###### As an `Admin`, I can assign Nugget to a resource in specifict phase so we have a item asymmetric issue will be created for repository in github that track it.
+
+###### As a `member`, I can aware of new comment in issue of github in chatroom of Nugget.
+
+
