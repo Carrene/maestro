@@ -14,8 +14,9 @@ Cutoff derived from underlying fields.
 Description (optional): Should not fill it all with white-spaces.  
 Description's character counter.  
 Form fields get focus by clicking on the field's name or value bax.  
-"Leave new release view?" or "Save changes?" alert appears when release form is
-losing focus.  
+"Leave new release view?" alert appears when a new release form is losing 
+focus.  
+"Save changes?" alert appears when an existing release form is losing focus.  
 Alert prevents page to reload or load another URL.  
 Alert should have focus to accept keyboard key-press.  
 "Save" button appears after a change in form.  
@@ -84,8 +85,9 @@ Group options: Public
 Launch (required for projects): Accepts from options only.  
 Launch is filled on page load with current selected release.  
 Launch options are all releases.  
-"Leave new project view?" or "Save changes?" alert appears when projects form 
-is losing focus.  
+"Leave new project view?" alert appears when a new project form is losing 
+focus.  
+"Save changes?" alert appears when an existing projects form is losing focus.  
 "New Project" appears when an existing unchanged project selected.  
 Project list columns are: Name, Group, Pace, Status, Launch, Member, Target, 
   Created At  
@@ -118,8 +120,10 @@ Prevent adding a resource several times.
 Delete a resource.  
 Prevent adding a non-existent resource. Returns: "No resources".  
 Resources should be assigned to related phases.  
-"Are you sure leave the new nugget?" or "Are you sure leave the update nugget?" 
-alert appears when nugget form losing focus.  
+"Are you sure leave the new nugget?" alert appears when a new nugget form is 
+losing focus.  
+"Are you sure leave the update nugget?" alert appears when an existing nugget 
+form is losing focus.  
 "New Nugget" appears when an existing unchanged nugget selected.  
 Nugget list columns are: ID, Subscribe, Name, Pace, Status, Priority, Type, 
 Phase, Tags, Days, Target, Created At  
