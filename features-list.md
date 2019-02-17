@@ -34,7 +34,7 @@ Right side panel stays on the selected tab when changing project or nugget.
 Right side panel loads new data when changing list item.  
 Audit logs tab is enabled only in existing nuggets.  
 Red notification indicator on logs icon meaning subscribed nuggets modified.  
-Audit logs sorted from the oldest change to the newest.
+Audit logs sorted from the oldest change to the newest.  
 Audit logs columns are: Event, Old, New, User, Date  
 Attachments tab is disabled in any new entity.  
 Attachments tab is available on editing projects or nuggets.  
