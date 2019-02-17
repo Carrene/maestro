@@ -1,317 +1,130 @@
 # Maestro features checklist
 
-## Sign up page
+Real-time validation on sign up and login form fields.  
+Direct login after sign up.  
+The user name is editable on settings' Profile section.  
+The user picture is changable on settings' Profile section.  
+The user pasword is changable on settings' Account section.  
+The Organizations section on setting shows organizations whic user belongs to.  
+Name (required): length and duplicate existence check when adding or editing
+an entity (release, project, nugget).  
+Cutoff (required for releases): Refuse incorrect dates.  
+Cutoff calendar widget functionality.  
+Cutoff derived from underlying fields.  
+Description (optional): Should not fill it all with white-spaces.  
+Description's character counter.  
+Form fields get focus by clicking on the field's name or value bax.  
+"Leave new release view?" or "Save changes?" alert appears when release form is
+losing focus.  
+Alert prevents page to reload or load another URL.  
+Alert should have focus to accept keyboard key-press.  
+"Save" button appears after a change in form.  
+"Save" reverts to the previous state when changes reverted.  
+"New Release" appears when an existing unchanged release selected.  
+Releases list columns: Name, Target, Created At, Cutoff  
+Double-click on a release opens its projects at 
+`http://nightly.maestro.carrene.com/releases/5/projects`  
+Sort the list by each column.  
+Reverse sort is available too.  
+List items selection using arrow keys.  
+Sorted by "Created At" column "oldest to newest" on page load.  
+Click on a list item, fills right side panel and chat section.  
+Right side panel stays on the selected tab when changing project.
+Audit logs tab is enabled only in existing nuggets.  
+Red notification indicator on logs icon meaning subscribed nuggets modified.  
+Audit logs sorted from the newest change to oldest.  
+Audit logs columns are: Event, Old, New, User, Date  
+Attachments tab is disabled in any new entity.  
+Attachments tab is available on editing projects or nuggets.  
+Search on attachments available.  
+Add an attachment with "+ Add Attachment" which uploads a file.  
+"Change Attachment" appears to change the added file.  
+The file removed by select nothing after "Change Attachment" clicked.  
+Attachment file size and extension check.  
+Stay on Add Attachment box while changing nuggets or projects.  
+Attachment has description.  
+"Save" button does not appear until a file upload done.  
+Adding a file caption only does not enable "Save" button.  
+Delete attachment by creator.  
+Viewing attachments on a frame showing file and creator and creation date.  
+Links tab is disabled in any new entity.  
+Chat is enabled on projects and nuggets.  
+Send chat message with `Enter` key and arrow icon.  
+Markdown support in chat.  
+Mention with `@` in chat.  
+Search users to mention after inserting `@` in chat.  
+Immediately showing the sent message in chat.  
+Sender name on a sent message.  
+"replies  to" quoted message if required on sent message.  
+Read check-marks of a sent message.  
+Date and time of a sent message.  
+Edit a message by sender.  
+Edit a message attachment or remove it.  
+Editing mode banner on top of input box.  
+Cancel edit with `Esc` key or close icon.  
+Replies to an edited message showing edited message quoted.  
+Reply to a deleted message is not available.  
+Click on quoted message, jumps to that message.  
+Delete a message by sender.  
+Delete confirm with alert.  
+Delete confirm alert focus to accept keyboard key-press.  
+Show "This message is deleted" with date, time, read check-marks without sender 
+name for deleted message.  
+Replies to a deleted message showing "This message is deleted" quoted.  
+Unread messages horizontal line indication.  
+Unread jump circle button having unread messages count.  
+Attachments files size and extensions check.  
+Multi-file attachments.  
+Status (required for new projects): Accepts from options only.  
+Status for projects options: Queued, Active, On Hold, Done  
+Workflow (required for projects): Accepts from options only.  
+Workflow options: Default  
+Group (required for projects): Accepts from options only.  
+Group options: Public  
+Launch (required for projects): Accepts from options only.  
+Launch is filled on page load with current selected release.  
+Launch options are all releases.  
+"Leave new project view?" or "Save changes?" alert appears when projects form 
+is losing focus.  
+"New Project" appears when an existing unchanged project selected.  
+Project list columns are: Name, Group, Pace, Status, Launch, Member, Target, 
+  Created At  
+Filter projects list by: Pace, Status.  
+Enables Nugget icon on the left sidebar by selecting a project.  
+Double-click on a project opens its nuggets at 
+`http://nightly.maestro.carrene.com/releases/5/projects/20/nuggets`  
+Status for nuggets options: To Do, In Progress, On Hold, Done, Complete  
+Priority (required for nuggets): Accepts from options only.  
+Priority options: Low, Normal, High  
+Tags (required for nuggets): Accepts from drop-down list only.  
+Search on tags.  
+Multiple tag selection.  
+Highlight selected tags.  
+Prevent adding a tag several times.  
+Delete a tag.  
+Prevent adding a non-existent tag. Returns: "Sorry, no matching options".  
+Target (required for nuggets): Refuse incorrect dates.  
+Target calendar widget functionality.  
+Type (required for nuggets): Accepts from options only.  
+Types are: Bug, Feature  
+Phase (required, on editing a nugget): Accepts from options only.  
+Phase options are: Backlog, Triage (default), Design, Development, Test  
+Resource (on editing a nugget): Accepts from options only.  
+Resource accepts empty value.  
+Search on resources.  
+Multiple resource selection.  
+Highlight selected resources.  
+Prevent adding a resource several times.  
+Delete a resource.  
+Prevent adding a non-existent resource. Returns: "No resources".  
+Resources should be assigned to related phases.  
+"Are you sure leave the new nugget?" or "Are you sure leave the update nugget?" 
+alert appears when nugget form losing focus.  
+"New Nugget" appears when an existing unchanged nugget selected.  
+Nugget list columns are: ID, Subscribe, Name, Pace, Status, Priority, Type, 
+Phase, Tags, Days, Target, Created At  
+Filter nuggets list by: Subscribe, Pace, Status, Priority*, Type, Phase, Tags  
+List of subscribed modified nuggets at "Unread" part.  
+Red notification indicator when nugget change recorded.  
+Chat mentions will be counts as notifications.  
 
-* Real-time validation on form fields.
-* Direct Login after sign up.
-
-## Settings
-
-* The Name is editable.
-* The Picture could be changed but **cannot be removed**.
-* Repeat new password real-time validation.
-
-## Launches
-
-### A new release or edit a release (Right panel):
-
-* Name (required): Validation (length and duplicate existence check).
-* Cutoff (required):
-  - Should not accept incorrect dates.
-  - Calendar widget functionality.
-  - Derived from underlying fields.
-* Description (optional): (can’t fill it all with space/enter) and the
-    character counter should show a correct number.
-* Form fields could get focus by clicking on the field's name or value bar
-    (text, select options, ...).
-* **Leave new release view?** or **Save changes?** alert: 
-  - Appears when form losing focus.
-  - Should prevent page to reload or load another URL.
-  - The alert buttons should have focus in order to accept keyboard key-press.
-  - Should not appear when no change made or changes reverted on fields.
-* Top bar:
-  - **Save** button appears after a change in form and revert to the previous
-      state when changes reverted.
-  - **New Release** appears when an existing release selected which is not
-      changed.
-* Other tabs including logs, attachments, and links on the right side panel are
-    disabled.
-
-### Chat section:
-
-* Chat section is disabled.
-
-### Releases list:
-
-* List columns:
-  - Name
-  - Target
-  - Created At
-  - Cutoff
-* The list can be sorted by each column and also reverse sort is available.
-* The list items **cannot** be selected using arrow keys.
-* The list is sorted by **Created At** column **oldest to newest** on page
-    load.
-* Click on a release row, fills right side panel in order to edit or view.
-* Double-click on a release row opens the selected release projects at 
-    `http://nightly.maestro.carrene.com/releases/5/projects`
-
-## Projects
-
-### A new project or edit a project (Right panel):
-
-* Name (required): Validation (length and duplicate existence check).
-* Status (required): Should not accept incorrect inputs. (Values only in select
-    options are valid). Status options are:
-  - Queued
-  - Active
-  - On Hold
-  - Done
-* Workflow (required): Should not accept incorrect inputs. (Values only in
-    select options are valid).
-  - Workflow contains only **Default**.
-  - Workflow is **not available** when editing an **existing** project.
-* Group (required): Should not accept incorrect inputs. (Values only in select
-    options are valid). Group contains only **Public**. 
-* Launch (required): 
-  - Should not accept incorrect inputs. (Values only in select options are
-    valid).
-  - Launch is **filled** on page load when release selected. 
-  - Launch contains all releases which added on launches.
-* Description (optional): (can’t fill it all with space/enter) and the
-    character counter should show a correct number.
-* Form fields could get focus by clicking on the field's name or value bar (text, 
-select options, ...).
-* **Leave new project view?** or **Save changes?** alert: 
-  - Appears when form losing focus.
-  - Should prevent page to reload or load another URL.
-  - The alert buttons should have focus in order to accept keyboard key-press.
-  - Should not appear when no change made or changes reverted on fields.
-* Top bar:
-  - **Save** button appears after a change in form or attachments and revert to
-      the previous state when changes reverted.
-  - **New Project** appears when an existing project selected which is not
-      changed.
-* Other tabs including logs, attachments, and links on the right side panel are:
-    - Disabled at **new** projects.
-    - Attachments are available on **existing** projects.
-    - Go to [Attachment features](#Attachment-features) to view detailed
-        features.
-
-### Chat section:
-
-* Chat section is:
-  - Disabled at a **new** project.
-  - Available on **existing** project selection.
-  - Go to [Chat features](#Chat-features) to view detailed features.
-
-### Projects list:
-
-* List columns are:
-  - Name
-  - Group
-  - Pace
-  - Status
-  - Launch
-  - Member
-  - Target
-  - Created At
-* The list can be filtered by **Pace** and **Status**, available with buttons
-    under the purple top bar.
-* The list can be sorted by each column and also reverse sort is available.
-* The list is sorted by **Created At** column **oldest to newest** on page
-    load.
-* The List items **cannot** be selected using arrow keys.
-* Click on a project row, enables Nugget icon on the left sidebar.
-* Click on a project row, fills right side panel and chat section in order to
-    edit or view.
-* Right side panel should stay on the selected tab when selected project
-    changes.
-* Double-click on a project row opens the selected project nuggets at 
-    `http://nightly.maestro.carrene.com/releases/5/projects/20/nuggets`
-
-## Nuggets
-
-### A new nugget or edit a nugget (Right panel):
-
-* Name (required): Validation (length and duplicate existence check).
-* Status (required): Should not accept incorrect inputs. (Values only in select
-    options are valid). Status options are:
-  - To Do
-  - In Progress
-  - On Hold
-  - Done
-  - Complete
-* Priority (required): Should not accept incorrect inputs. (Values only in
-    select options are valid). Priority options are:
-  - Low
-  - Normal
-  - High
-* Tags (required): 
-  - Should not accept incorrect inputs. (Values only in select options are
-    valid).
-  - Search on tags is available. 
-  - Multiple tag selection is available.
-  - selected tags will be highlighted.
-  - Adding a tag several times is not allowed.
-  - Delete a tag is available.
-  - Adding a non-existent tag is not allowed. Returns: `Sorry, no matching
-      options.`
-* Target (required): 
-  - Should not accept incorrect dates.
-  - Calendar widget functionality.
-* Type (required): Should not accept incorrect inputs. (Values only in select
-    options are valid). Types are:
-   - Bug
-   - Feature
-* Phase (required, editing existing nugget): Should not accept incorrect
-    inputs. (Values only in select options are valid). Phase options are:
-  - Backlog
-  - Triage (default phase on nugget creation)
-  - Design
-  - Development
-  - Test
-* Resource (editing existing nugget):
-  - Could be assigned to no one.
-  - Should not accept incorrect inputs. (Values only in select options are
-    valid).
-  - Search on resources is available. 
-  - Multiple resource selection is available.
-  - selected resources will be highlighted.
-  - Adding a resource several times is not allowed.
-  - Delete a resource is available.
-  - Adding a non-existent tag is not allowed. Returns: `No resources`
-  - Resources should be assigned to related phases. Not everyone can be
-      assigned to every phase.
-* Description (optional): (can’t fill it all with space/enter) and the
-    character counter should show a correct number.
-* Form fields could get focus by clicking on the field's name or value bar (text, 
-select options, ...).
-* **Are you sure leave the new nugget?** or **Are you sure leave the update
-    nugget?** alert: 
-  - Appears when form losing focus.
-  - Should prevent page to reload or load another URL.
-  - The alert buttons should have focus in order to accept keyboard key-press.
-  - Should not appear when no change made or changes reverted on fields.
-* Top bar:
-  - **Save** button appears after a change in form or attachments and revert to
-      the previous state when changes reverted.
-  - **New Nugget** appears when an existing nugget selected which is not
-      changed.
-* Other tabs including logs, attachments, and links on the right side panel
-    are:
-    - Disabled at **new** nuggets.
-    - Audit log available on **existing** nuggets.
-    - Go to [Audit logs features](#Audit-logs-features) to view detailed
-        features.
-    - Attachments are available on **existing** nuggets.
-    - Go to [Attachment features](#Attachment-features) to view detailed
-        features.
-
-### Chat section:
-
-* Chat section is:
-  - Disabled at **new** nuggets.
-  - Available on **existing** nugget selection.
-  - Go to [Chat features](#Chat-features) to view detailed features.
-
-### Nuggets list:
-
-* List columns are:
-  - ID
-  - Subscribe
-  - Name
-  - Pace
-  - Status
-  - Priority
-  - Type
-  - Phase
-  - Tags
-  - Days
-  - Target
-  - Created At
-* The list can be filtered by **Subscribe**, **Pace**, **Status**, 
-    **Priority**, **Type**, **Phase** and **Tags**, available with buttons
-    under the purple top bar.
-* The list can be sorted by each column and also reverse sort is available.
-* The list is sorted by **Created At** column **oldest to newest** on page
-    load.
-* The List items **cannot** be selected using arrow keys.
-* Click on a nugget row, fills right side panel and chat section in order to
-    edit or view.
-* Right side panel should stay on the selected tab when selected project
-    changes.
-
-## Unread
-
-* This part is a list of subscribed and also modified nuggets.
-* The page layout is the same as the nuggets Part.
-* The red notification indicator will appear if new nugget change recorded.
-* Also, chat mentions will be counts as notifications.
-
-
-## Chat features
-
-* Sending message:
-  - Send with `Return` key and arrow icon
-  - Markdown support
-  - Mention with `@` and search users to mention
-  - Immediately showing the sent message
-* Messages box:
-  - Sender at top of the box
-  - **replied to** quoted message if required
-  - Message contents
-  - Edit option available on ... top right corner.
-  - Read check-marks on the bottom right corner
-  - Date and time left to read checkmark
-  - If a message deleted, it will show `This message is deleted` without any
-      sender name, but with date and time and read check-marks.
-  - Unread messages indication (A horizontal line indicating unread message
-      point until next messages).
-* Attachments:
-  - Pictures and other files size and extensions check
-  - ~~Multi-file attachments available~~
-* Delete:
-  - Replies to a deleted message should show deleted message quoted.
-  - The sender can only delete his/her own message, nobody else.
-  - Delete confirm with alert ~~and has focus and accept keyboard keys~~.
-* Edit:
-  - Edit a message text
-  - Edit attachments (Remove or change file/image)
-  - Replies to an edited message should show edited message quoted.
-  - The sender can only edit his/her own message, nobody else.
-  - A box on top of the input box which is showing editing status with a pen icon
-  - This box can be escaped with `X` icon ~~or `Esc` key on the keyboard~~.
-* Reply:
-  - Reply to a deleted message is not available.
-  - Mentions with `@` are also available on reply.
-  - ~~Click on quoted message, jumps to that message.~~
-
-## Attachment features
-
-* ~~Search on attachments.~~
-* The user can add an attachment:
-  - Description: (Maybe mentions and markdown support).
-  - **+ Add Attachment** button to upload a file.
-  - **Change Attachment** button to change the existing file. This will
-      **clear** added attachment if no file selected.
-  - Attachment file size and file extension should check.
-  - Opened purple box to add a new attachment, stay open while switching
-      between projects.
-  - Top bar **Save** button does not appear until a file upload done.
-      (Adding a file caption only does not enable **Save** button)
-* The user can delete attachment which added by him/her.
-* The user can view attachments on a frame showing file and creator and creation
-    date & time.
-
-## Audit logs features
-
-* Red notification indicator on subscribed nuggets if a new log is recorded.
-* Log records date order should be sorted from the latest changes (at the top)
-    to earlier changes (at the bottom).
-* Log columns are:
-  - Event
-  - Old
-  - New
-  - User
-  - Date
