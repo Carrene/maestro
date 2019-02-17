@@ -3,9 +3,9 @@
 Real-time validation on sign up and login form fields.  
 Direct login after sign up.  
 The user name is editable on settings' Profile section.  
-The user picture is changable on settings' Profile section.  
-The user pasword is changable on settings' Account section.  
-The Organizations section on setting shows organizations whic user belongs to.  
+The user picture is changeable on settings' Profile section.  
+The user password is changeable on settings' Account section.  
+The Organizations section on setting shows organizations which user belongs to.  
 Name (required): length and duplicate existence check when adding or editing
 an entity (release, project, nugget).  
 Cutoff (required for releases): Refuse incorrect dates.  
@@ -13,7 +13,7 @@ Cutoff calendar widget functionality.
 Cutoff derived from underlying fields.  
 Description (optional): Should not fill it all with white-spaces.  
 Description's character counter.  
-Form fields get focus by clicking on the field's name or value bax.  
+Form fields get focus by clicking on the field's name or value box.  
 "Leave new release view?" alert appears when a new release form is losing 
 focus.  
 "Save changes?" alert appears when an existing release form is losing focus.  
@@ -30,10 +30,11 @@ Reverse sort is available too.
 List items selection using arrow keys.  
 Sorted by "Created At" column "oldest to newest" on page load.  
 Click on a list item, fills right side panel and chat section.  
-Right side panel stays on the selected tab when changing project.
+Right side panel stays on the selected tab when changing project or nugget.
+Right side panel loads new data when changing list item.  
 Audit logs tab is enabled only in existing nuggets.  
 Red notification indicator on logs icon meaning subscribed nuggets modified.  
-Audit logs sorted from the newest change to oldest.  
+Audit logs sorted from the oldest change to the newest.  
 Audit logs columns are: Event, Old, New, User, Date  
 Attachments tab is disabled in any new entity.  
 Attachments tab is available on editing projects or nuggets.  
@@ -47,7 +48,8 @@ Attachment has description.
 "Save" button does not appear until a file upload done.  
 Adding a file caption only does not enable "Save" button.  
 Delete attachment by creator.  
-Viewing attachments on a frame showing file and creator and creation date.  
+Viewing attachments on a frame showing file and creator and creation date &
+time.  
 Links tab is disabled in any new entity.  
 Chat is enabled on projects and nuggets.  
 Send chat message with `Enter` key and arrow icon.  
@@ -60,6 +62,7 @@ Sender name on a sent message.
 Read check-marks of a sent message.  
 Date and time of a sent message.  
 Edit a message by sender.  
+Edit label for edited messages.  
 Edit a message attachment or remove it.  
 Editing mode banner on top of input box.  
 Cancel edit with `Esc` key or close icon.  
@@ -70,12 +73,12 @@ Delete a message by sender.
 Delete confirm with alert.  
 Delete confirm alert focus to accept keyboard key-press.  
 Show "This message is deleted" with date, time, read check-marks without sender 
-name for deleted message.  
+name for a deleted message.  
 Replies to a deleted message showing "This message is deleted" quoted.  
-Unread messages horizontal line indication.  
+Unread messages horizontal white line indication.  
 Unread jump circle button having unread messages count.  
-Attachments files size and extensions check.  
-Multi-file attachments.  
+Attachments files size and extensions check on chats.  
+Multi-file attachments on chats.  
 Status (required for new projects): Accepts from options only.  
 Status for projects options: Queued, Active, On Hold, Done  
 Workflow (required for projects): Accepts from options only.  
@@ -119,7 +122,6 @@ Highlight selected resources.
 Prevent adding a resource several times.  
 Delete a resource.  
 Prevent adding a non-existent resource. Returns: "No resources".  
-Resources should be assigned to related phases.  
 "Are you sure leave the new nugget?" alert appears when a new nugget form is 
 losing focus.  
 "Are you sure leave the update nugget?" alert appears when an existing nugget 
@@ -127,7 +129,7 @@ form is losing focus.
 "New Nugget" appears when an existing unchanged nugget selected.  
 Nugget list columns are: ID, Subscribe, Name, Pace, Status, Priority, Type, 
 Phase, Tags, Days, Target, Created At  
-Filter nuggets list by: Subscribe, Pace, Status, Priority*, Type, Phase, Tags  
+Filter nuggets list by: Subscribe, Pace, Status, Priority, Type, Phase, Tags  
 List of subscribed modified nuggets at "Unread" part.  
 Red notification indicator when nugget change recorded.  
 Chat mentions will be counts as notifications.  
