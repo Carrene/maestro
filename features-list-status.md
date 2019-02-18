@@ -44,7 +44,7 @@ focus.
 - [x] The file removed by select nothing after "Change Attachment" clicked.  
 - [ ] Attachment file size and extension check.  
 - [x] Stay on Add Attachment box while changing nuggets or projects.  
-- {x] Attachment has description.  
+- [x] Attachment has description.  
 - [x] "Save" button does not appear until a file upload done.  
 - [x] Adding a file caption only does not enable "Save" button.  
 - [x] Delete attachment by creator.  
