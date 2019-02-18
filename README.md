@@ -231,6 +231,8 @@ monitoring environment.
 
 ###### As a `Member` I can delete an attachment from an issue.
 
+###### As a `Member`, I can unrelate an issue to another issue.
+
 
 #### Draft Issue
 
