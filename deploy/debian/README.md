@@ -86,10 +86,10 @@ Then continue to install panda:
 ./install-panda.sh
 ```
 
-Now, verify success installation:
+Now, verify success installation, place server address as first argument:
 
 ``` bash
-./test-panda.sh
+./test-panda.sh localhost
 ```
 
 Now, if you get `--- DONE ---`, go on with next steps.

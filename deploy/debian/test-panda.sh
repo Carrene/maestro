@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
+HOST=$1
 getJSONValueByKey () {
   python3.6 -c "import sys, json; print(json.load(sys.stdin)['$1'])"
 }
 
-VERSION=$(curl localhost:8081/apiv1/version -sw " %{http_code}")
+VERSION=$(curl $HOST:8081/apiv1/version -sw " %{http_code}")
 STATUS_CODE=${VERSION:${#VERSION}-3}
 DATA=$(echo ${VERSION::${#VERSION}-3} | getJSONValueByKey version)
 
@@ -17,7 +18,7 @@ else
 	VERSION=$DATA
 fi
 
-TOKEN=$(curl -X CREATE localhost:8081/apiv1/tokens -F "email=god@example.com" \
+TOKEN=$(curl -X CREATE $HOST:8081/apiv1/tokens -F "email=god@example.com" \
 	-F "password=123456"  -sw " %{http_code}")
 STATUS_CODE=${TOKEN:${#TOKEN}-3}
 DATA=$(echo ${TOKEN::${#TOKEN}-3} | getJSONValueByKey token)
@@ -32,7 +33,7 @@ else
 fi
 
 AUTHORIZATION_CODE=$(curl -X CREATE \
-"localhost:8081/apiv1/authorizationcodes?applicationId=1&scopes=title&\
+"$HOST:8081/apiv1/authorizationcodes?applicationId=1&scopes=title&\
 state=123456&redirectUri=http://example2.com/oauth2" \
 -H "authorization:$DATA" -sw " %{http_code}")
 STATUS_CODE=${AUTHORIZATION_CODE:${#AUTHORIZATION_CODE}-3}
@@ -48,7 +49,7 @@ else
 	AUTHORIZATION_CODE=$DATA
 fi
 
-SECRET=$(curl -X GET "localhost:8081/apiv1/applications/1" \
+SECRET=$(curl -X GET "$HOST:8081/apiv1/applications/1" \
 	-H "authorization: $TOKEN" -sw " %{http_code}")
 STATUS_CODE=${SECRET:${#SECRET}-3}
 DATA=$(echo ${SECRET::${#SECRET}-3} | getJSONValueByKey secret)
@@ -63,7 +64,7 @@ else
 fi
 
 ACCESS_TOKEN=$(curl -X CREATE -sw " %{http_code}" \
-"localhost:8081/apiv1/accesstokens" -F "code=$AUTHORIZATION_CODE" \
+"$HOST:8081/apiv1/accesstokens" -F "code=$AUTHORIZATION_CODE" \
   -F "secret=$SECRET" -F "applicationId=1" )
 STATUS_CODE=${ACCESS_TOKEN:${#ACCESS_TOKEN}-3}
 DATA=$(echo ${ACCESS_TOKEN::${#ACCESS_TOKEN}-3} | getJSONValueByKey accessToken)
@@ -77,7 +78,7 @@ else
 	ACCESS_TOKEN=$DATA
 fi
 
-MEMBER=$(curl -X GET "localhost:8081/apiv1/members/me" \
+MEMBER=$(curl -X GET "$HOST:8081/apiv1/members/me" \
   -H "authorization: oauth2-accesstoken $ACCESS_TOKEN" -sw  " %{http_code}")
 STATUS_CODE=${MEMBER:${#MEMBER}-3}
 DATA=$(echo ${MEMBER::${#MEMBER}-3} | getJSONValueByKey title)
