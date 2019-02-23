@@ -238,7 +238,7 @@ monitoring environment.
 
 ###### As `jaguar`, I can unsee an issue for its subscribed members when a new message sends in the related room.
 
-###### As `jaguar`, I can mention a member in an issue, So the issue will be counted as an unread issue for that member
+###### As `jaguar`, I can mention a member in an issue, So the issue will be counted as an unread for that member
 
 
 #### Unread
