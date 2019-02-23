@@ -236,11 +236,11 @@ monitoring environment.
 
 ###### As a `Member`, I can unrelate an issue to another issue.
 
-###### As `jaguar`, I can mark an issue as unread for its subscribed members when a new message send in related room.
+###### As `jaguar`, I can mark an issue as unread for its subscribed members when a new message send in the related room.
 
-###### As `jaguar`, I can mark an issue as unread for a subscribed member when that member get mentioned in related room.
+###### As `jaguar`, I can mark an issue as unread for a subscribed member when that member get mentioned in the related room.
 
-###### As `jaguar`, I can mark an issue as unread for an unsubscribed member when that member get mentioned in related room.
+###### As `jaguar`, I can mark an issue as unread for an unsubscribed member when that member get mentioned in the related room.
 
 
 #### Unread
