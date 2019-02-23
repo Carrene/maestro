@@ -245,7 +245,7 @@ monitoring environment.
 
 #### Unread
 
-##### As a 'Member', I can list all of my unread issues.
+##### As a `Member`, I can list all of my unread issues.
 
 #### Draft Issue
 
