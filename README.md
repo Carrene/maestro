@@ -241,6 +241,7 @@ monitoring environment.
 
 ###### As `jaguar`, I can mention a member in an issue, So the issue will be counted as an unread for that member.
 
+###### As a `Member`, I can RELATE a draft issue to another issue.
 
 #### Unread
 
