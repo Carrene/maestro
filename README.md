@@ -171,9 +171,9 @@ monitoring environment.
 
 ###### As an `Admin` I can place one or more projects into the group.
 
-###### As a `Member` I can join a group.
+###### As an `Admin` I can add a member to a group.
 
-###### As a `Member` I can leave a group.
+###### As an `Admin` I can remove member from a group.
 
 #### Workflow
 
