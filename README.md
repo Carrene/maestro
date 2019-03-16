@@ -325,9 +325,9 @@ monitoring environment.
 
 ###### As a `member`, I can UPDATE a skill.
 
-###### As a `member`, I can GRANT a skill to a member.
+###### As an `Admin`, I can GRANT a skill to a member.
 
-###### As a `member`, I can DENY a skill from a member.
+###### As an `Admin`, I can DENY a skill from a member.
 
 
 ## Phase 2
