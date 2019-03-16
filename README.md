@@ -319,6 +319,16 @@ monitoring environment.
 
 ###### As a `member`, I can LIST Time Cards of a nugget.
 
+#### Skill
+
+###### As a `member`, I can CREATE a skill.
+
+###### As a `member`, I can UPDATE a skill.
+
+###### As an `Admin`, I can GRANT a skill to a member.
+
+###### As an `Admin`, I can DENY a skill from a member.
+
 
 ## Phase 2
 
