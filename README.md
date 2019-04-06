@@ -325,9 +325,11 @@ monitoring environment.
 
 #### Skill
 
-###### As a `member`, I can CREATE a skill.
+###### As a `Member`, I can CREATE a skill.
 
-###### As a `member`, I can UPDATE a skill.
+###### As a `Member`, I can UPDATE a skill.
+
+###### As a `Member`, I can GET a skill.
 
 ###### As an `Admin`, I can GRANT a skill to a member.
 
