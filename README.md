@@ -333,6 +333,9 @@ monitoring environment.
 
 ###### As an `Admin`, I can DENY a skill from a member.
 
+###### As a `member`, I can LIST skills.
+
+###### As a `member`, I can GET a skill using id.
 
 ## Phase 2
 
