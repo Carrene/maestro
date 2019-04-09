@@ -279,6 +279,10 @@ monitoring environment.
 
 ###### As a `Member`, I can `CREATE` a tag with a unique title.
 
+###### As a `Member`, I can `UPDATE` a tag using id.
+
+###### As a `Member`, I can `GET` a tag using id.
+
 #### Resource
 ###### As a `member`, I can `LIST` resources of a phase.
 
