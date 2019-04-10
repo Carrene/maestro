@@ -201,6 +201,8 @@ monitoring environment.
 
 ###### As a `Manager` I can view, search, group and filter phases with title, order and etc ...
 
+###### As a `Manager` I can get a phase by id.
+
 
 #### Nugget
 
