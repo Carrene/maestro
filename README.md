@@ -10,6 +10,7 @@ The table containing projects related to Maestro:
 
 | Dolphin        | Panda         | Jaguar        | Flamingo       | Crane          |
 | -------------- | ------------- | ------------- | -------------- | -------------- |
+| v0.33.0a2      | v0.6.2a3      | v0.15.2a3     | v0.27.0-a8     | v0.4.0-a1      | 
 | v0.32.0a1      | v0.6.2a3      | v0.14.0a3     | v0.25.8-a8     | v0.4.0-a1      | 
 | v0.29.0a1      | v0.6.2a3      | v0.14.0a3     | v0.25.2-a8     | v0.4.0-a1      | 
 | v0.29.0a1      | v0.6.1a3      | v0.14.0a3     | v0.25.1-a8     | v0.3.3-a1      |
