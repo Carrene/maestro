@@ -171,6 +171,8 @@ monitoring environment.
 
 ###### As an `Member` I can create a group with unique title.
 
+###### As a `Member` I can update a group using id.
+
 ###### As an `Admin` I can place one or more projects into the group.
 
 ###### As an `Admin` I can add a member to a group.
