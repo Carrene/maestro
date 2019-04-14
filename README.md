@@ -344,6 +344,8 @@ monitoring environment.
 
 ###### As a `member`, I can LIST skills.
 
+###### As a `member`, I can LIST of member's skills.
+
 ###### As a `member`, I can GET a skill using id.
 
 ## Phase 2
