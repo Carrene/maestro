@@ -173,6 +173,8 @@ monitoring environment.
 
 ###### As a `Member` I can update a group using id.
 
+###### As a `Member`, I can list of member's groups.
+
 ###### As an `Admin` I can place one or more projects into the group.
 
 ###### As an `Admin` I can add a member to a group.
