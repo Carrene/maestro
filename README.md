@@ -273,15 +273,15 @@ monitoring environment.
 
 #### Calendar
 
-###### As an `Admin`, I can `ADD` an event to my calendar.
+###### As an `Admin`, I can `ADD` an event to the calendar.
 
-###### As an `Admin`, I can `UPDATE` an event from my calendar.
+###### As an `Admin`, I can `UPDATE` an event.
 
-###### As an `Admin`, I can `REMOVE` an event from my calendar.
+###### As an `Admin`, I can `REMOVE` an event.
 
-###### As an `Admin`, I can `LIST` my events from my calendar.
+###### As an `Admin`, I can `LIST` my events.
 
-###### As an `Admin`, I can `GET` an event from my calendar using id.
+###### As an `Admin`, I can `GET` an event using id.
 
 
 #### Tag
