@@ -271,6 +271,18 @@ monitoring environment.
 
 ###### As a `Member`, I can `FINALIZE` a draft issue.
 
+#### Calendar
+
+###### As an `Admin`, I can `ADD` an event to my calendar.
+
+###### As an `Admin`, I can `UPDATE` an event from my calendar.
+
+###### As an `Admin`, I can `REMOVE` an event from my calendar.
+
+###### As an `Admin`, I can `LIST` my events from my calendar.
+
+###### As an `Admin`, I can `GET` an event from my calendar using id.
+
 
 #### Tag
 ###### Tags are custom attributes of Issues. 
