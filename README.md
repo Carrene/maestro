@@ -381,7 +381,7 @@ monitoring environment.
 
 ###### As an `Admin`, I can delete a role if there is no resource exist with this role.
 
-#### integrations with github
+#### Integrations with github
 
 ###### As an `Admin`, I can select one or more repositor(y|ies) to transfer a Nugget to github as a milstone.
 
@@ -389,4 +389,19 @@ monitoring environment.
 
 ###### As a `member`, I can aware of new comment in issue of github in chatroom of Nugget.
 
+#### Supervisor 
+
+###### As a `Supervisor`, I can login and logout.
+
+###### As a `Supervisor`, I can list all users. 
+
+###### As a `Supervisor`, I can list all organization.
+
+###### As a `Supervisor`, I can add organization.
+
+###### As a `Supervisor`, I can delete organization.
+
+###### As a `Supervisor`, I can edit organization.
+
+###### As a `Supervisor`, I can block a user by it's identifier, So the new block user can't login anymore.
 
