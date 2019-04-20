@@ -404,7 +404,9 @@ monitoring environment.
 
 #### Supervisor 
 
-###### As a `Supervisor`, I can login and logout.
+###### As a `Supervisor`, I can login.
+
+###### As a `Supervisor`, I can logout.
 
 ###### As a `Supervisor`, I can list all users. 
 
@@ -414,7 +416,7 @@ monitoring environment.
 
 ###### As a `Supervisor`, I can delete organization.
 
-###### As a `Supervisor`, I can edit organization.
+###### As a `Supervisor`, I can update organization.
 
 ###### As a `Supervisor`, I can block a user by it's identifier, So the new block user can't login anymore.
 
