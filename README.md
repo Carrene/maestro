@@ -412,11 +412,11 @@ monitoring environment.
 
 ###### As a `Supervisor`, I can list all organization.
 
-###### As a `Supervisor`, I can add organization.
+###### As a `Supervisor`, I can add an organization.
 
-###### As a `Supervisor`, I can delete organization.
+###### As a `Supervisor`, I can delete an organization.
 
-###### As a `Supervisor`, I can update organization.
+###### As a `Supervisor`, I can update an organization.
 
-###### As a `Supervisor`, I can block a user by it's identifier, So the new block user can't login anymore.
+###### As a `Supervisor`, I can block a user by it's identifier, So the newly blocked user can't login anymore.
 
