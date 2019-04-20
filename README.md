@@ -284,6 +284,13 @@ monitoring environment.
 
 ###### As an `Admin`, I can `GET` an event using id.
 
+###### As an `Admin`, I can `ADD` a type.
+
+###### As an `Admin`, I can `UPDATE` a type.
+
+###### As an `Admin`, I can `LIST` a type.
+
+###### As an `Admin`, I can `GET` a type.
 
 #### Tag
 ###### Tags are custom attributes of Issues. 
