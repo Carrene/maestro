@@ -418,5 +418,5 @@ monitoring environment.
 
 ###### As a `Supervisor`, I can update an organization.
 
-###### As a `Supervisor`, I can block a member by it's identifier, So the newly blocked member cannot login anymore.
+###### As a `Supervisor`, I can block a member by its identifier, So the newly blocked member cannot login anymore.
 
