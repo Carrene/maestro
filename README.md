@@ -286,7 +286,7 @@ monitoring environment.
 
 #### Event type
 
-###### As a `Member`, I can `ADD` a type.
+###### As a `Member`, I can `CREATE` a type.
 
 ###### As a `Member`, I can `UPDATE` a type.
 
