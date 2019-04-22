@@ -286,13 +286,13 @@ monitoring environment.
 
 #### Event type
 
-###### As an `Member`, I can `ADD` a type.
+###### As a `Member`, I can `ADD` a type.
 
-###### As an `Member`, I can `UPDATE` a type.
+###### As a `Member`, I can `UPDATE` a type.
 
-###### As an `Member`, I can `LIST` types.
+###### As a `Member`, I can `LIST` types.
 
-###### As an `Member`, I can `GET` a type.
+###### As a `Member`, I can `GET` a type.
 
 #### Tag
 ###### Tags are custom attributes of Issues. 
