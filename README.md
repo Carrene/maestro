@@ -406,13 +406,11 @@ monitoring environment.
 
 ###### As a `Supervisor`, I can login.
 
-###### As a `Supervisor`, I can logout.
-
 ###### As a `Supervisor`, I can list all members. 
 
 ###### As a `Supervisor`, I can list all organization.
 
-###### As a `Supervisor`, I can add a new organization.
+###### As a `Supervisor`, I can create a new organization.
 
 ###### As a `Supervisor`, I can delete an organization.
 
@@ -420,3 +418,6 @@ monitoring environment.
 
 ###### As a `Supervisor`, I can block a member by its identifier, So the newly blocked member cannot login anymore.
 
+#### Member
+
+###### As a `Member`, I can logout.
