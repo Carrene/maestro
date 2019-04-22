@@ -290,7 +290,7 @@ monitoring environment.
 
 ###### As an `Member`, I can `UPDATE` a type.
 
-###### As an `Mwmber`, I can `LIST` types.
+###### As an `Member`, I can `LIST` types.
 
 ###### As an `Member`, I can `GET` a type.
 
