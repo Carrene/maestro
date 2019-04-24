@@ -294,7 +294,10 @@ monitoring environment.
 
 ###### As a `Member`, I can `GET` an event-type.
 
+###### As a `Member`, I can `DELETE` an event-type.
+
 #### Tag
+
 ###### Tags are custom attributes of Issues. 
 
 ###### As a `Member`, I can `LIST` the tags.
