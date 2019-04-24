@@ -145,7 +145,7 @@ monitoring environment.
 
 ###### As a `Member` I can attach a file to the `Project`.
 
-###### As a `Member` I can delete an attachment from a `Project'.
+###### As a `Member` I can delete an attachment from a `Project`.
 
 
 #### Release
@@ -409,23 +409,25 @@ monitoring environment.
 
 ###### As an `Admin`, I can assign Nugget to a resource in specifict phase so we have a item asymmetric issue will be created for repository in github that track it.
 
-###### As a `member`, I can aware of new comment in issue of github in chatroom of Nugget.
+###### As a `Member`, I can aware of new comment in issue of github in chatroom of Nugget.
 
 #### Supervisor 
 
 ###### As a `Supervisor`, I can login.
 
-###### As a `Supervisor`, I can logout.
-
 ###### As a `Supervisor`, I can list all members. 
 
 ###### As a `Supervisor`, I can list all organization.
 
-###### As a `Supervisor`, I can add a new organization.
+###### As a `Supervisor`, I can create a new organization.
 
 ###### As a `Supervisor`, I can delete an organization.
 
 ###### As a `Supervisor`, I can update an organization.
 
 ###### As a `Supervisor`, I can block a member by its identifier, So the newly blocked member cannot login anymore.
+
+#### Member
+
+###### As a `Member`, I can logout.
 
