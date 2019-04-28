@@ -376,6 +376,12 @@ monitoring environment.
 
 ###### As a `member`, I can GET a skill using id.
 
+#### Item
+
+###### As a `Admin`, I can get an item using id.
+
+###### As a `Admin`, I can list items by their phases id, tags id, resources id and their titles.
+
 ## Phase 2
 
 ##### Settings/Setup (Groups/Phases/Workflows/Users)
