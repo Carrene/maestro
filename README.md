@@ -262,6 +262,8 @@ monitoring environment.
 
 ###### As a `Member`, I can RELATE a draft issue to another issue.
 
+###### As a `Member`, I can SEARCH on issues by title and id.
+
 #### Unread
 
 ###### As a `Member`, I can list all of my unread issues.
