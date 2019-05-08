@@ -327,6 +327,7 @@ monitoring environment.
 ###### As a `Member`, I can `GET` a tag using id.
 
 #### Resource
+
 ###### As a `member`, I can `LIST` resources of a phase.
 
 #### Sprint Bundle
@@ -391,6 +392,13 @@ monitoring environment.
 ###### As a `Admin`, I can get an item using id.
 
 ###### As a `Admin`, I can list items by their phases id, tags id, resources id and their titles.
+
+#### Working Day
+
+###### As an `Admin`, I can start a working day.
+
+###### As an `Admin`, I can end a working day. 
+
 
 ## Phase 2
 
