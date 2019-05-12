@@ -392,6 +392,8 @@ monitoring environment.
 
 ###### As a `Admin`, I can list items by their phases id, tags id, resources id and their titles.
 
+###### As a `Resource`, I can estimate the completion time of an item.
+
 ## Phase 2
 
 ##### Settings/Setup (Groups/Phases/Workflows/Users)
