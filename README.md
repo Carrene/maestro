@@ -210,6 +210,7 @@ monitoring environment.
 
 ###### As a `Manager` I can get a phase by id.
 
+###### As a `Member` I can list phases by summaries of them.
 
 #### Nugget
 
