@@ -398,9 +398,16 @@ monitoring environment.
 
 #### Item
 
-###### As a `Admin`, I can get an item using id.
+###### As an `Admin`, I can get an item using id.
 
-###### As a `Admin`, I can list items by their phases id, tags id, resources id and their titles.
+###### As an `Admin`, I can list items by their phases id, tags id, resources id and their titles.
+
+#### Stage
+
+###### As an `Admin`, I can change stage of nugget to backlog with return date to triage.
+
+###### As a `Supervisor`, I can return nugget to triage in specific time.
+
 
 ## Phase 2
 
