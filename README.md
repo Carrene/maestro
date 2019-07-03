@@ -404,7 +404,7 @@ monitoring environment.
 
 #### Stage
 
-###### As an `Admin`, I can change stage of nugget to backlog with return date to triage.
+###### As an `Admin`, I can change stage of nugget to backlog and schedule the date for return to triage.
 
 ###### As a `Supervisor`, I can return nugget to triage in specific time.
 
