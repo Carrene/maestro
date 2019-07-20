@@ -310,15 +310,15 @@ monitoring environment.
 
 ###### As a `Member`, I can `DELETE` an event-type.
 
-#### Time-card
+#### Daily-report
 
-###### As a `Member`, I can `CREATE` a time-card.
+###### As a `Member`, I can `CREATE` a daily-report.
 
-###### As a `Member`, I can `UPDATE` a time-card.
+###### As a `Member`, I can `UPDATE` a daily-report.
 
-###### As a `Member`, I can `LIST` time-cards.
+###### As a `Member`, I can `LIST` daily-reports.
 
-###### As a `Member`, I can `GET` a time-card.
+###### As a `Member`, I can `GET` a daily-report.
 
 #### Tag
 
