@@ -413,6 +413,8 @@ monitoring environment.
 ###### As a `Supervisor`, I can return nugget to triage in specific time.
 
 
+###### As a `Resource`, I can estimate the completion time of an item.
+
 ## Phase 2
 
 ##### Settings/Setup (Groups/Phases/Workflows/Users)
