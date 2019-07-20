@@ -209,6 +209,7 @@ monitoring environment.
 
 ###### As a `Manager` I can view, search, group and filter workflows with title, etc ...
 
+###### As a `Member` I can get a workflow by *id*.
 
 #### Phase
 
