@@ -110,17 +110,17 @@ monitoring environment.
 
 - *common user* : anyone with a userid, pwd
 - *Stakeholder*: any user who is subscribed to one or more issues
-- *Resource*: user with at least one skill
-- *Project Manager*: user who has the '*Project Manager' skill. To become the Project Manager of a specific project, the User is assigned to the Triage Phase of the project.
-- *Release Manager*: user who has the '*Release Manager' skill.
-- *Admin*: a special attribute that can be assigned to any user in order to handle administrative tasks such as: setting up users, skills, phases, workflows, calendar settings, and other general settings
+- *Resource*: user with at least one specialty
+- *Project Manager*: user who has the '*Project Manager' specialty. To become the Project Manager of a specific project, the User is assigned to the Triage Phase of the project.
+- *Release Manager*: user who has the '*Release Manager' specialty.
+- *Admin*: a special attribute that can be assigned to any user in order to handle administrative tasks such as: setting up users, specialties, phases, workflows, calendar settings, and other general settings
 
 - *Guest*:{this is new to me - Massoud}.
 
-*System Tagged Skills:
-     -Phase task can be assigned to Resources with the associated Phase skill
-     -Project(s) can only be assihned to Resource with Project Manager skill
-     -Release(s) can only be assigned to Resource with Release Manager skill
+*System Tagged Specialtys:
+     -Phase task can be assigned to Resources with the associated Phase specialty
+     -Project(s) can only be assihned to Resource with Project Manager specialty
+     -Release(s) can only be assigned to Resource with Release Manager specialty
 
 
 ### Projects
@@ -205,7 +205,7 @@ monitoring environment.
 
 ###### As a `Manager` I can update title of workflow.
 
-###### As a `Manager` I can assign/unassign a resource to/from an issue, so a new item will be created within the selected phase or the default phase is selected based on the resource skill. An issue can be assigned to multiple resources in multiple phases simultaneously which leads to create multiple items, but it cannot be assigned to a resource twice. Just after assigning, resource will be added to chat room of project which that issue is in. So that when unassign an issue from a resource, the resource will be removed from the chat box of project which issue is in. 
+###### As a `Manager` I can assign/unassign a resource to/from an issue, so a new item will be created within the selected phase or the default phase is selected based on the resource specialty. An issue can be assigned to multiple resources in multiple phases simultaneously which leads to create multiple items, but it cannot be assigned to a resource twice. Just after assigning, resource will be added to chat room of project which that issue is in. So that when unassign an issue from a resource, the resource will be removed from the chat box of project which issue is in. 
 
 ###### As a `Manager` I can view, search, group and filter workflows with title, etc ...
 
@@ -387,23 +387,23 @@ monitoring environment.
 
 ###### As a `member`, I can LIST Time Cards of a nugget.
 
-#### Skill
+#### Specialty
 
-###### As a `Member`, I can CREATE a skill.
+###### As a `Member`, I can CREATE a specialty.
 
-###### As a `Member`, I can UPDATE a skill.
+###### As a `Member`, I can UPDATE a specialty.
 
-###### As a `Member`, I can GET a skill.
+###### As a `Member`, I can GET a specialty.
 
-###### As an `Admin`, I can GRANT a skill to a member.
+###### As an `Admin`, I can GRANT a specialty to a member.
 
-###### As an `Admin`, I can DENY a skill from a member.
+###### As an `Admin`, I can DENY a specialty from a member.
 
-###### As a `member`, I can LIST skills.
+###### As a `member`, I can LIST specialties.
 
-###### As a `member`, I can LIST of member's skills.
+###### As a `member`, I can LIST of member's specialties.
 
-###### As a `member`, I can GET a skill using id.
+###### As a `member`, I can GET a specialty using id.
 
 #### Item
 
@@ -424,13 +424,13 @@ monitoring environment.
 
 ##### Settings/Setup (Groups/Phases/Workflows/Users)
 
-###### As an `Admin`, I should be able to create a new User/Group/Workflow/Phase/Skill.
+###### As an `Admin`, I should be able to create a new User/Group/Workflow/Phase/Specialty.
 
-###### As an `Admin`, I should be able to edit a User/Group/Skill.
+###### As an `Admin`, I should be able to edit a User/Group/Specialty.
 
 ###### As an `Admin`, I will be not be able to edit an active Workflow/Phase.
 
-###### As an `Admin`, I should be able to give users certain skills.
+###### As an `Admin`, I should be able to give users certain specialties.
 
 #### Authorization
 
